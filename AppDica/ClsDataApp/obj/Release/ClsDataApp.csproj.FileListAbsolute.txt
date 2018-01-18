@@ -1,0 +1,9 @@
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\bin\ClsDataApp.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\bin\ClsDataApp.pdb
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\bin\ClsDataSets.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\bin\ClsInterface.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\bin\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\bin\ClsInterface.pdb
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\obj\Release\ClsDataApp.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\obj\Release\ClsDataApp.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataApp\obj\Release\ClsDataApp.pdb

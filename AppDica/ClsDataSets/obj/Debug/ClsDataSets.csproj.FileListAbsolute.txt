@@ -1,0 +1,10 @@
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\bin\ClsDataSets.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\bin\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\obj\Debug\ClsDataSets.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\obj\Debug\ClsDataSets.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\obj\Debug\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataSets\bin\ClsDataSets.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataSets\bin\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataSets\obj\Debug\ClsDataSets.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataSets\obj\Debug\ClsDataSets.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataSets\obj\Debug\ClsDataSets.pdb

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ASP/ASPP0001.aspx">
+      <publishTime>12/13/2017 17:22:08</publishTime>
+    </File>
+    <File Include="bin/ClsDataApp.dll">
+      <publishTime>12/19/2017 17:16:20</publishTime>
+    </File>
+    <File Include="bin/ClsDataSets.dll">
+      <publishTime>12/19/2017 17:16:19</publishTime>
+    </File>
+    <File Include="bin/ClsInterface.dll">
+      <publishTime>12/19/2017 17:16:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CSharp.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/MyMainApp.dll">
+      <publishTime>12/19/2017 17:17:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.DataAnnotations.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Data.DataSetExtensions.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Data.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Drawing.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.EnterpriseServices.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.ApplicationServices.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.DynamicData.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Entity.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Extensions.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Services.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Xml.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="bin/System.Xml.Linq.dll">
+      <publishTime>11/05/2015 20:36:48</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.css">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.css.map">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.min.css">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.min.css.map">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap.css.map">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css.map">
+      <publishTime>11/30/2017 15:00:36</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>12/07/2017 09:41:05</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/30/2017 15:00:51</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/30/2017 15:00:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/30/2017 15:00:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/30/2017 15:00:52</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/30/2017 15:00:52</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/11/2017 11:02:41</publishTime>
+    </File>
+    <File Include="images/333.jpg">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/444.jpg">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/555.jpg">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/client1.png">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/client2.png">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/client3.png">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/client4.png">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/client5.png">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/client8.png">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/clockbg.jpg">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/clocklanding.jpg">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/favicon.ico">
+      <publishTime>11/30/2017 15:01:50</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>11/30/2017 15:01:51</publishTime>
+    </File>
+    <File Include="images/logoder.png">
+      <publishTime>11/30/2017 15:01:51</publishTime>
+    </File>
+    <File Include="images/logoizq.png">
+      <publishTime>11/30/2017 15:01:51</publishTime>
+    </File>
+    <File Include="images/logoizq1.png">
+      <publishTime>11/30/2017 15:01:51</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>11/30/2017 15:02:37</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>11/30/2017 15:02:37</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>12/11/2017 11:06:51</publishTime>
+    </File>
+    <File Include="js/npm.js">
+      <publishTime>11/30/2017 15:02:37</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>12/19/2017 16:58:29</publishTime>
+    </File>
+    <File Include="MasterInicio.Master">
+      <publishTime>12/11/2017 11:07:38</publishTime>
+    </File>
+    <File Include="MasterProceso.master">
+      <publishTime>12/11/2017 17:48:07</publishTime>
+    </File>
+    <File Include="Registro.aspx">
+      <publishTime>12/19/2017 10:34:17</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/19/2017 17:16:23</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

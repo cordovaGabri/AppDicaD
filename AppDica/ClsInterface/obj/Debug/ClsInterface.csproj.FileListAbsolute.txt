@@ -1,0 +1,42 @@
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\ClsInterface.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\ClsInterface.pdb
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\obj\Debug\ClsInterface.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\obj\Debug\ClsInterface.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\obj\Debug\ClsInterface.pdb
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\Microsoft.CSharp.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Configuration.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Data.DataSetExtensions.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Data.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Drawing.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.EnterpriseServices.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Web.ApplicationServices.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Web.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Web.DynamicData.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Web.Entity.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Web.Extensions.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Web.Services.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Xml.dll
+C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsInterface\bin\System.Xml.Linq.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\ClsInterface.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\ClsInterface.pdb
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\Microsoft.CSharp.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Configuration.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Data.DataSetExtensions.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Data.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Drawing.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.EnterpriseServices.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Web.ApplicationServices.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Web.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Web.DynamicData.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Web.Entity.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Web.Extensions.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Web.Services.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Xml.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\bin\System.Xml.Linq.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\obj\Debug\ClsInterface.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\obj\Debug\ClsInterface.dll
+C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsInterface\obj\Debug\ClsInterface.pdb
