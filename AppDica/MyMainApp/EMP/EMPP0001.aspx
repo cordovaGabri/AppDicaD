@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterProceso.master" AutoEventWireup="true" CodeBehind="EMPP0001.aspx.cs" Inherits="MyMainApp.EMP.EMPP0001" %>
 
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
 
@@ -10,6 +12,14 @@
             <div class="text-center">
                 <%--  div titulo--%>
                 <asp:Label ID="LblTitulo" runat="server" Text="Registro para Empresa" Font-Bold="True" Font-Size="18pt"></asp:Label>
+            </div>
+            <div style="text-align:right;right:25px;left:25px">
+                            <asp:Button ID="BtnFicha" runat="server" Text="Ver Ficha" />
+          <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
+             
+                <asp:Label ID="LblEmpresa" runat="server" Text="" Font-Bold="True"></asp:Label><br />
+                <asp:Label ID="LblPasantia" runat="server" Text="" Font-Bold="True"></asp:Label><br />
+                <asp:Label ID="LblProyecto" runat="server" Text="" Font-Bold="True"></asp:Label>
             </div>
             <%--fin div titulo--%>
             <div class="container-fluid">
@@ -268,7 +278,7 @@
                                         <asp:Panel ID="PanelNivelEducativo" runat="server">
                                             <div align="center">
                                                 <asp:Label ID="Label47" runat="server" Text="Nivel Educativo" Font-Size="14pt"></asp:Label></div>
-                                            <div class="form-group"><asp:Label ID="Label62" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="CATEGORIA ESCOLARIDAD:"></asp:Label>
+                                            <div class="form-group"><asp:Label ID="Label62" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="CATEGORIA ESCOLARIDAD:"></asp:Label>
                                     <div class="col-md-3"><asp:DropDownList ID="CboCategoriaEscolaridad" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" OnSelectedIndexChanged="CboCategoriaEscolaridad_SelectedIndexChanged">
                                     </asp:DropDownList></div>
                                                  <asp:Label class="control-label  col-sm-3" ID="Label22" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
@@ -292,6 +302,7 @@
                                             <asp:GridView ID="GVNivelEducativo" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <Columns>
+                                                    <asp:BoundField DataField="DS_ESCOLARIDAD" HeaderText="CATEGORIA ESCOLARIDAD" />
                                                     <asp:BoundField HeaderText="NIVEL EDUCATIVO" DataField="DS_ESCOLARIDAD" />
                                                     <asp:BoundField HeaderText="OPCIÓN ACADÉMICA" DataField="DS_CARRERA" />
                                                 </Columns>
@@ -655,8 +666,16 @@
                 <%--fin contenido tab--%>
             </div>
             <%--fin container-fluid--%>
+             <asp:Panel ID="PanelFicha" runat="server" CssClass="modalPopup"  Height="527px">
+        <br /><center>
+        <rsweb:ReportViewer ID="RVEmpresa" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="427px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="75%" style="margin-right: 0px"><LocalReport ReportPath="EMP\RptEmpresa.rdlc"></LocalReport></rsweb:ReportViewer></center>
+       <div align="center"><br /><asp:Button ID="BtnCerrarFicha" runat="server" Text="Cerrar" /></div>
+             </asp:Panel>
+          <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
+ 
         </form>
         <%--fin formulario--%>
     </asp:Panel>
+     
 </asp:Content>
 

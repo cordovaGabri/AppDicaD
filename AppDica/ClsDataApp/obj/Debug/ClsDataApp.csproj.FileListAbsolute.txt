@@ -16,3 +16,12 @@ C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataApp
 C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataApp\bin\ClsInterface.dll
 C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataApp\bin\ClsDataSets.pdb
 C:\Users\AYSSA\Documents\Visual Studio 2012\Projects\AppDica_20180117\ClsDataApp\bin\ClsInterface.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\bin\ClsDataApp.dll
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\bin\ClsDataApp.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\bin\ClsDataSets.dll
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\bin\ClsInterface.dll
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\bin\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\bin\ClsInterface.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\obj\Debug\ClsDataApp.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\obj\Debug\ClsDataApp.dll
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataApp\obj\Debug\ClsDataApp.pdb

@@ -39,3 +39,7 @@ C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\MyMainApp\obj\Release\RdlCompile.c
 C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\MyMainApp\obj\Release\RdlCompile.compiled
 C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\MyMainApp\obj\Release\MyMainApp.dll
 C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\MyMainApp\obj\Release\MyMainApp.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Release\MyMainApp.csprojResolveAssemblyReference.cache
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Release\MyMainApp.dll.licenses
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Release\RdlCompile.cache
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Release\RdlCompile.compiled

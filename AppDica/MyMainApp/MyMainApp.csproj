@@ -276,6 +276,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ASP\RptFichaAspirante.rdlc" />
+    <EmbeddedResource Include="EMP\RptEmpresa.rdlc" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ASP\Documentos\" />

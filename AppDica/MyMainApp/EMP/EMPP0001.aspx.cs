@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using ClsDataApp;
 using ClsInterface;
 using dica;
+using Microsoft.Reporting.WebForms;
 
 namespace MyMainApp.EMP
 {
@@ -79,6 +80,7 @@ namespace MyMainApp.EMP
             FillCboDestreza();
             FillGVNivelEducativo();
             FillGVContrato();
+            CargarReporte();
         }
 
         public void Adicionar() { }
@@ -101,6 +103,7 @@ namespace MyMainApp.EMP
             {
                 TxtIDEmpresa.Text = dvEmpresa.Table.Rows[0]["ID"].ToString();
                 TxtEmpresa.Text = dvEmpresa.Table.Rows[0]["DS_NOMBRE_EMPRESA"].ToString();
+                LblEmpresa.Text = TxtEmpresa.Text;
                 CboActEcono.SelectedValue=dvEmpresa.Table.Rows[0]["ID_ACT_ECO"].ToString();
                 TxtNombreContact.Text=dvEmpresa.Table.Rows[0]["DS_NOMBRE_CONTACTO"].ToString();
                 TxtEmailC.Text=dvEmpresa.Table.Rows[0]["DS_EMAIL_CONTACTO"].ToString();
@@ -240,6 +243,8 @@ namespace MyMainApp.EMP
             if (dvPasantia.Count > 0)
             {
                 TxtIDPasantia.Text = dvPasantia.Table.Rows[0]["ID"].ToString();
+                TxtTituloPasantia.Text = dvPasantia.Table.Rows[0]["NOMBRE_PASANTIA"].ToString();
+                LblPasantia.Text = TxtTituloPasantia.Text;
                 TxtNombEva.Text = dvPasantia.Table.Rows[0]["DS_NOMBRE_EVAL"].ToString();
                 TxtEmailEva.Text = dvPasantia.Table.Rows[0]["DS_EMAIL_CONTACTO"].ToString();
                 TxtIDEmpresa.Text = dvPasantia.Table.Rows[0]["ID_EMPRESA"].ToString();
@@ -406,7 +411,7 @@ namespace MyMainApp.EMP
                 if (Convert.ToInt32(TxtIDPasantia.Text) > 0)
                 {
                     CEscolaridadPasantia objEscolaridadPasantia = new CEscolaridadPasantia(_DataSistema.ConexionBaseDato);
-                    objResultado = objEscolaridadPasantia.Actualizacion(0, Convert.ToInt32(TxtIDPasantia.Text), Convert.ToInt32(CboNivelEducativo.SelectedValue), Convert.ToInt32(CboOpcionAcademica.SelectedValue),
+                    objResultado = objEscolaridadPasantia.Actualizacion(0, Convert.ToInt32(TxtIDPasantia.Text), Convert.ToInt32(CboCategoriaEscolaridad.SelectedValue), Convert.ToInt32(CboNivelEducativo.SelectedValue), Convert.ToInt32(CboOpcionAcademica.SelectedValue),
                       _DataSistema.Cusuario, TipoActualizacion.Adicionar);
 
                     if (objResultado.CodigoError == 0)
@@ -433,7 +438,7 @@ namespace MyMainApp.EMP
         protected void FillGVNivelEducativo()
         {
             CEscolaridadPasantia objEscolaridadPasantia = new CEscolaridadPasantia(_DataSistema.ConexionBaseDato);
-            dvEscolaridadPasantia = new DataView(objEscolaridadPasantia.Detalle(0,Convert.ToInt32(TxtIDPasantia.Text), 0, 0, "", DateTime.Now, "", DateTime.Now, 2).TB_ESCOLARIDAD_PASANTIA);
+            dvEscolaridadPasantia = new DataView(objEscolaridadPasantia.Detalle(0,Convert.ToInt32(TxtIDPasantia.Text),0, 0, 0, "", DateTime.Now, "", DateTime.Now, 2).TB_ESCOLARIDAD_PASANTIA);
 
             GVNivelEducativo.DataSource = dvEscolaridadPasantia;
             GVNivelEducativo.DataBind();
@@ -523,7 +528,8 @@ namespace MyMainApp.EMP
                 {
                     CConsultoriaEntregable objConsultoriaEntregable = new CConsultoriaEntregable(_DataSistema.ConexionBaseDato);
                     objResultado = objConsultoriaEntregable.Actualizacion(0, Convert.ToInt32(TxtIdProyecto.Text), TxtNombEntregable.Text,
-                        TxtDescripPasantia.Text, Convert.ToDateTime(TxtFechaEntrega.Text), TxtDuracionE.Text
+                        TxtDescripPasantia.Text, Convert.ToDateTime(TxtFechaEntrega.Text), TxtDuracionE.Text,
+                        'P', "", "", ""
                     , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
 
                     if (objResultado.CodigoError == 0)
@@ -550,6 +556,7 @@ namespace MyMainApp.EMP
         {
             CConsultoriaEntregable objEntregable = new CConsultoriaEntregable(_DataSistema.ConexionBaseDato);
             dvEntregable = new DataView(objEntregable.Detalle(0, Convert.ToInt32(TxtIdProyecto.Text), "", "", DateTime.Now, "", 
+                'A', "", "", "",
                 _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 2).TB_CONSULTORIA_ENTREGABLE);
 
             GVEntregable.DataSource = dvEntregable;
@@ -586,6 +593,17 @@ namespace MyMainApp.EMP
 
             CboCategoriaEscolaridad.DataSource = dvCategoriaEscolaridad;
             CboCategoriaEscolaridad.DataBind();
+        }
+
+        protected void CargarReporte()
+        {
+            DataTable dtE;
+            CEmpresa objEmpresa = new CEmpresa(_DataSistema.ConexionBaseDato);
+            DataView dvEmpresa = new DataView(objEmpresa.Detalle(0, TxtEmpresa.Text, TxtNombreContact.Text, TxtEmailC.Text, TxtTelC.Text, _DataSistema.Cusuario,
+                TxtTelEmpresa.Text, TxtDirEmpresa.Text, 0, 0,
+            TxtNombRepre.Text, TxtEmailRep.Text, TxtNitRep.Text, TxtDuiRep.Text, 0, _DataSistema.Cusuario, _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 4).TB_EMPRESA);
+            dtE = dvEmpresa.ToTable();
+            RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_EMPRESA", dtE));
         }
     }
 }

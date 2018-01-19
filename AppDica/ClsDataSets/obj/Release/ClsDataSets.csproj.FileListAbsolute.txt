@@ -2,3 +2,8 @@ C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\bin\ClsDataSets.dll
 C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\bin\ClsDataSets.pdb
 C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\obj\Release\ClsDataSets.dll
 C:\Users\AYSSA\Documents\GitHub\AYSSA\AppDica\ClsDataSets\obj\Release\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataSets\bin\ClsDataSets.dll
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataSets\bin\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataSets\obj\Release\ClsDataSets.dll
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataSets\obj\Release\ClsDataSets.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsDataSets\obj\Release\ClsDataSets.csprojResolveAssemblyReference.cache
