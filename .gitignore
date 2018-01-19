@@ -290,3 +290,5 @@ __pycache__/
 AppDica/ClsDataSets/DS_TB_EMP.xss
 AppDica/ClsDataApp/ClsDataApp.csproj
 AppDica/MyMainApp/TEC/TEC0001.aspx.cs
+*.suo
+AppDica/AppDica.v11.suo

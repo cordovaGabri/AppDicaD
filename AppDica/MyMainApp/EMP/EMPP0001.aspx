@@ -7,26 +7,30 @@
 
     <asp:Panel ID="Panel1" runat="server" Width="100%">
         <form id="form1" runat="server" class="form-horizontal">
-           
+
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <%--inicio formulario--%>
             <div class="text-center">
                 <%--  div titulo--%>
                 <asp:Label ID="LblTitulo" runat="server" Text="Registro para Empresa" Font-Bold="True" Font-Size="18pt"></asp:Label>
             </div>
-            <div style="text-align:right;right:25px;left:25px">
-                            <asp:Button ID="BtnFicha" runat="server" Text="Ver Ficha" /><br />
-          <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
-             
-                <asp:Label ID="LblEmpresa" runat="server" Text="" Font-Bold="True"></asp:Label><br />
-                <asp:Label ID="LblPasantia" runat="server" Text="" Font-Bold="True"></asp:Label><br />
-                <asp:Label ID="LblProyecto" runat="server" Text="" Font-Bold="True"></asp:Label>
+            <div style="text-align: right; right: 25px; left: 25px">
+                
+                        <asp:Button ID="BtnFicha" runat="server" Text="Ver Ficha" /><br />
+                      
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>     
+                         <asp:Label ID="LblEmpresa" runat="server" Text="" Font-Bold="True"></asp:Label><br />
+                        <asp:Label ID="LblPasantia" runat="server" Text="" Font-Bold="True"></asp:Label><br />
+                        <asp:Label ID="LblProyecto" runat="server" Text="" Font-Bold="True"></asp:Label>
+                </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
             <%--fin div titulo--%>
             <div class="container-fluid">
                 <div id="content">
                     <%--inicio container-fluid--%>
-                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                 <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
@@ -128,11 +132,18 @@
                                         <br />
                                         <div align="center">
                                             <asp:Button ID="BtnGuardarDatosGenerales" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarDatosGenerales_Click" ValidationGroup="DatoGeneral" />
-                                            &nbsp;
+                                       
                                         </div>
                                         <br />
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
+                                  <asp:Panel ID="PanelFicha" runat="server" CssClass="modalPopup"  Height="527px">
+        <br /><center>
+        <rsweb:ReportViewer ID="RVEmpresa" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="427px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="75%" style="margin-right: 0px"><LocalReport ReportPath="EMP\RptEmpresa.rdlc"></LocalReport></rsweb:ReportViewer></center>
+       <div align="center"><br /><asp:Button ID="BtnCerrarFicha" runat="server" Text="Cerrar" /></div>
+             </asp:Panel>
+          <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
+ 
                             </ContentTemplate>
                         </ajaxToolkit:TabPanel>
                         <%--fin tab datos--%>
@@ -277,17 +288,21 @@
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender2" runat="server" TargetControlID="PanelNivelEducativo" BorderColor="Orange" />
                                         <asp:Panel ID="PanelNivelEducativo" runat="server">
                                             <div align="center">
-                                                <asp:Label ID="Label47" runat="server" Text="Nivel Educativo" Font-Size="14pt"></asp:Label></div>
-                                            <div class="form-group"><asp:Label ID="Label62" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="CATEGORIA ESCOLARIDAD:"></asp:Label>
-                                    <div class="col-md-3"><asp:DropDownList ID="CboCategoriaEscolaridad" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" OnSelectedIndexChanged="CboCategoriaEscolaridad_SelectedIndexChanged">
-                                    </asp:DropDownList></div>
-                                                 <asp:Label class="control-label  col-sm-3" ID="Label22" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
+                                                <asp:Label ID="Label47" runat="server" Text="Nivel Educativo" Font-Size="14pt"></asp:Label>
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:Label ID="Label62" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="CATEGORIA ESCOLARIDAD:"></asp:Label>
+                                                <div class="col-md-3">
+                                                    <asp:DropDownList ID="CboCategoriaEscolaridad" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" OnSelectedIndexChanged="CboCategoriaEscolaridad_SelectedIndexChanged">
+                                                    </asp:DropDownList>
+                                                </div>
+                                                <asp:Label class="control-label  col-sm-3" ID="Label22" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
                                                 <div class="col-md-3">
                                                     <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ANIO" DataValueField="ID" AutoPostBack="True">
                                                     </asp:DropDownList>
                                                 </div>
                                             </div>
-                                             <div class="form-group">
+                                            <div class="form-group">
                                                 <asp:Label class="control-label  col-sm-3" ID="Label27" runat="server" Font-Bold="True" Text="OPCIÓN ACADÉMICA:"></asp:Label>
                                                 <div class="col-md-3">
                                                     <asp:DropDownList ID="CboOpcionAcademica" runat="server" class="form-control" DataTextField="DS_CARRERA" DataValueField="ID">
@@ -321,7 +336,8 @@
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender1" runat="server" TargetControlID="PanelHabilidades" BorderColor="Orange" />
                                         <asp:Panel ID="PanelHabilidades" runat="server">
                                             <div align="center">
-                                                <asp:Label ID="Label46" runat="server" Text="Habilidades" Font-Size="14"></asp:Label></div>
+                                                <asp:Label ID="Label46" runat="server" Text="Habilidades" Font-Size="14"></asp:Label>
+                                            </div>
                                             <div class="form-group">
                                                 <asp:Label class="control-label  col-sm-3" ID="Label42" runat="server" Font-Bold="True" Text="CONOCIMIENTO EN:"></asp:Label>
                                                 <div class="col-md-3">
@@ -370,7 +386,8 @@
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender3" runat="server" TargetControlID="PanelDestreza" BorderColor="Orange" />
                                         <asp:Panel ID="PanelDestreza" runat="server">
                                             <div align="center">
-                                                <asp:Label ID="Label48" runat="server" Text="Destrezas" Font-Size="14pt"></asp:Label></div>
+                                                <asp:Label ID="Label48" runat="server" Text="Destrezas" Font-Size="14pt"></asp:Label>
+                                            </div>
 
                                             <div class="form-group">
                                                 <asp:Label class="control-label  col-sm-3" ID="Label45" runat="server" Font-Bold="True" Text="DESTREZA:"></asp:Label>
@@ -404,7 +421,8 @@
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender4" runat="server" TargetControlID="PanelDatoAspirante" BorderColor="Orange" />
                                         <asp:Panel ID="PanelDatoAspirante" runat="server" Visible="False">
                                             <div align="center">
-                                                <asp:Label ID="Label49" runat="server" Text="Datos Aspirantes" Font-Size="14pt"></asp:Label></div>
+                                                <asp:Label ID="Label49" runat="server" Text="Datos Aspirantes" Font-Size="14pt"></asp:Label>
+                                            </div>
                                             <div class="form-group">
                                                 <asp:Label ID="Label50" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="NOMBRE ASPIRANTE:"></asp:Label>
                                                 <div class="col-md-9">
@@ -513,11 +531,11 @@
                                         <asp:AsyncPostBackTrigger ControlID="BtnProyectoGuardar" />
                                     </Triggers>
                                     <ContentTemplate>
-                                      
+
                                         <%--inicio tab proyecto--%>
                                         <br />
                                         <asp:TextBox ID="TxtIdProyecto" runat="server" Text="0" Visible="False"></asp:TextBox>
-                                         <div class="form-group">
+                                        <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label61" runat="server" Font-Bold="True" Text="TITULO PROYECTO:"></asp:Label>
                                             <div class="col-md-9">
                                                 <asp:TextBox class="form-control" ID="TxtTituloProyecto" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
@@ -563,50 +581,51 @@
                                                 <asp:TextBox class="form-control" ID="TxtMontoPro" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator27" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtMontoPro" ValidationGroup="proyecto">Llenar monto de proyecto</asp:RequiredFieldValidator>
                                             </div>
-                                        </div>  
-                                        <asp:Panel ID="PanelProyecto" runat="server">
-                                        <div align="center">
-                                            <asp:Button ID="BtnProyectoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" ValidationGroup="proyecto" OnClick="BtnProyectoGuardar_Click" />
-                                            &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
-                                        <br />
-                                       
-                                        <asp:GridView ID="GVContrato" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="GVContrato_SelectedIndexChanged">
-                                            <AlternatingRowStyle BackColor="White" />
-                                            <Columns>
-                                                <asp:TemplateField HeaderText="" Visible="false">
-                                                    <ItemTemplate>
-                                                        <asp:TextBox ID="TxtIDPasantiaGV" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:TextBox>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:BoundField HeaderText="ID" DataField="ID" />
-                                                <asp:BoundField HeaderText="NOMBRE DE PROYECTO" DataField="DS_NOMBRE_CONSULTORIA" />
-                                                <asp:BoundField HeaderText="FECHA DE CONTRATO" DataField="FECH_INICIO_CONTRATO" />
-                                                <asp:BoundField HeaderText="DURACIÓN DE CONTRATO" DataField="DS_CONTRATO_DURACION" />
-                                                <asp:TemplateField HeaderText="ENTREGABLES">
-                                                    <ItemTemplate>
-                                                        <asp:Button ID="BtnVerEntregable" runat="server" CommandName="Select"
-                                                            Text="Ver Entregables" OnClientClick="ShowModalPopup()" />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                            </Columns>
-                                            <EditRowStyle BackColor="#2461BF" />
-                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                            <RowStyle BackColor="#EFF3FB" />
-                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                                        </asp:GridView>
-                                        <br />
-                                           </asp:Panel>
-                                         <asp:Panel ID="PanelEntregable" runat="server" Visible="False">
-                                              <div align="center">
-                                                <asp:Label ID="Label59" runat="server" Text="Entregables" Font-Size="14pt"></asp:Label></div>
-                                          <div class="form-group">
+                                        <asp:Panel ID="PanelProyecto" runat="server">
+                                            <div align="center">
+                                                <asp:Button ID="BtnProyectoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" ValidationGroup="proyecto" OnClick="BtnProyectoGuardar_Click" />
+                                                &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                                            </div>
+                                            <br />
+
+                                            <asp:GridView ID="GVContrato" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="GVContrato_SelectedIndexChanged">
+                                                <AlternatingRowStyle BackColor="White" />
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="" Visible="false">
+                                                        <ItemTemplate>
+                                                            <asp:TextBox ID="TxtIDPasantiaGV" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:BoundField HeaderText="ID" DataField="ID" />
+                                                    <asp:BoundField HeaderText="NOMBRE DE PROYECTO" DataField="DS_NOMBRE_CONSULTORIA" />
+                                                    <asp:BoundField HeaderText="FECHA DE CONTRATO" DataField="FECH_INICIO_CONTRATO" />
+                                                    <asp:BoundField HeaderText="DURACIÓN DE CONTRATO" DataField="DS_CONTRATO_DURACION" />
+                                                    <asp:TemplateField HeaderText="ENTREGABLES">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="BtnVerEntregable" runat="server" CommandName="Select"
+                                                                Text="Ver Entregables" OnClientClick="ShowModalPopup()" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                                <EditRowStyle BackColor="#2461BF" />
+                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                <RowStyle BackColor="#EFF3FB" />
+                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                            </asp:GridView>
+                                            <br />
+                                        </asp:Panel>
+                                        <asp:Panel ID="PanelEntregable" runat="server" Visible="False">
+                                            <div align="center">
+                                                <asp:Label ID="Label59" runat="server" Text="Entregables" Font-Size="14pt"></asp:Label>
+                                            </div>
+                                            <div class="form-group">
                                                 <asp:Label ID="Label55" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="NOMBRE ENTREGABLE:"></asp:Label>
                                                 <div class="col-md-9">
                                                     <asp:TextBox ID="TxtNombEntregable" runat="server" class="form-control" AutoCompleteType="Disabled"></asp:TextBox>
@@ -615,7 +634,7 @@
                                             <div class="form-group">
                                                 <asp:Label ID="Label56" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="DURACION EN DIAS:"></asp:Label>
                                                 <div class="col-md-3">
-                                                    <asp:TextBox ID="TxtDuracionE" runat="server" class="form-control" AutoCompleteType="Disabled"></asp:TextBox>
+                                                    <asp:TextBox ID="TxtDuracionE" runat="server" class="form-control" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
                                                 </div>
                                                 <asp:Label ID="Label57" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="FECHA DE ENTREGA:"></asp:Label>
                                                 <div class="col-md-3">
@@ -633,6 +652,7 @@
                                                 <asp:Button ID="BtnGuardarEntregable" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarEntregable_Click" />
                                                 &nbsp;<asp:Button ID="BtnCancelarEntregable" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" OnClick="BtnCancelarEntregable_Click" />
                                             </div>
+                                            <br />
                                             <asp:GridView ID="GVEntregable" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <Columns>
@@ -652,8 +672,6 @@
                                                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                             </asp:GridView>
                                             <br />
-                                            <div align="center">
-                                            </div>
                                         </asp:Panel>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
@@ -662,20 +680,14 @@
 
                     </ajaxToolkit:TabContainer>
                     <%--fin tab habilidades--%>
+
                 </div>
                 <%--fin contenido tab--%>
             </div>
             <%--fin container-fluid--%>
-             <asp:Panel ID="PanelFicha" runat="server" CssClass="modalPopup"  Height="527px">
-        <br /><center>
-        <rsweb:ReportViewer ID="RVEmpresa" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="427px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="75%" style="margin-right: 0px"><LocalReport ReportPath="EMP\RptEmpresa.rdlc"></LocalReport></rsweb:ReportViewer></center>
-       <div align="center"><br /><asp:Button ID="BtnCerrarFicha" runat="server" Text="Cerrar" /></div>
-             </asp:Panel>
-          <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
- 
         </form>
         <%--fin formulario--%>
     </asp:Panel>
-     
+
 </asp:Content>
 
