@@ -15,7 +15,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TB_EMP Detalle(int Id, int IdAspirante, int IdPasantia,
+        public ClsDataSets.DS_TB_EMP Detalle(int Id, string IdAspirante, int IdPasantia,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
@@ -51,7 +51,7 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-        public DataQuery Actualizacion(int Id, int IdPasantia, int IdActAspirante,
+        public DataQuery Actualizacion(int Id, string IdAspirante, int IdPasantia,
             int OpcionConsulta, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
@@ -92,7 +92,7 @@ namespace ClsDataApp
                 {
                     ObjCommand.Parameters.AddWithValue("@ID", Id);
                 }
-                ObjCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdActAspirante);
+                ObjCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
                 ObjCommand.Parameters.AddWithValue("@ID_PASANTIA", IdPasantia);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
