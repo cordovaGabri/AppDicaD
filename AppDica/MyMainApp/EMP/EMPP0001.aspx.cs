@@ -599,7 +599,7 @@ namespace MyMainApp.EMP
         {
             DataTable dtE;
             CEmpresa objEmpresa = new CEmpresa(_DataSistema.ConexionBaseDato);
-            DataView dvEmpresa = new DataView(objEmpresa.Detalle(0, TxtEmpresa.Text, TxtNombreContact.Text, TxtEmailC.Text, TxtTelC.Text, _DataSistema.Cusuario,
+            DataView dvEmpresa = new DataView(objEmpresa.Detalle(Convert.ToInt32(TxtIDEmpresa.Text), TxtEmpresa.Text, TxtNombreContact.Text, TxtEmailC.Text, TxtTelC.Text, _DataSistema.Cusuario,
                 TxtTelEmpresa.Text, TxtDirEmpresa.Text, 0, 0,
             TxtNombRepre.Text, TxtEmailRep.Text, TxtNitRep.Text, TxtDuiRep.Text, 0, _DataSistema.Cusuario, _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 4).TB_EMPRESA);
             dtE = dvEmpresa.ToTable();

@@ -14,7 +14,7 @@
                 <asp:Label ID="LblTitulo" runat="server" Text="Registro para Empresa" Font-Bold="True" Font-Size="18pt"></asp:Label>
             </div>
             <div style="text-align:right;right:25px;left:25px">
-                            <asp:Button ID="BtnFicha" runat="server" Text="Ver Ficha" />
+                            <asp:Button ID="BtnFicha" runat="server" Text="Ver Ficha" /><br />
           <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
              
                 <asp:Label ID="LblEmpresa" runat="server" Text="" Font-Bold="True"></asp:Label><br />
@@ -26,7 +26,7 @@
                 <div id="content">
                     <%--inicio container-fluid--%>
                     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                 <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
