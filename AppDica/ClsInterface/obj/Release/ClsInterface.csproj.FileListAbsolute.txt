@@ -38,3 +38,4 @@ C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsInterface\bin\System.Xml.dll
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsInterface\bin\System.Xml.Linq.dll
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsInterface\obj\Release\ClsInterface.dll
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsInterface\obj\Release\ClsInterface.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\ClsInterface\obj\Release\ClsInterface.csprojResolveAssemblyReference.cache

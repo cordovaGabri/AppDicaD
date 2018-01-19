@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterProceso.master" AutoEventWireup="true" CodeBehind="TEC0001.aspx.cs" Inherits="MyMainApp.TEC.TEC0001" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterProceso.master" AutoEventWireup="true" CodeBehind="TECC0001.aspx.cs" Inherits="MyMainApp.TEC.TEC0001" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxtoolkit" %>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
 
