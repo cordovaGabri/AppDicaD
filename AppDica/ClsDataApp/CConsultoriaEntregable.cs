@@ -109,7 +109,6 @@ namespace ClsDataApp
                 ObjCommand.Parameters.AddWithValue("@URL_ENTREGABLE", UrlEntregable);
                 ObjCommand.Parameters.AddWithValue("@DS_OBSERVACION_ENTREGABLE", ObservacionEntregable);
                 ObjCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
-                ObjCommand.Parameters.AddWithValue("@DS_DURACION_ENT", Duracion);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
                 ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);
