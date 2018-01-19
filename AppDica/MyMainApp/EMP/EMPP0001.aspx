@@ -30,7 +30,7 @@
             <div class="container-fluid">
                 <div id="content">
                     <%--inicio container-fluid--%>
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                 <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
@@ -137,10 +137,10 @@
                                         <br />
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
-                                  <asp:Panel ID="PanelFicha" runat="server" CssClass="modalPopup"  Height="527px">
+                                  <asp:Panel ID="PanelFicha" runat="server" CssClass="modalPopup"  Height="540px">
         <br /><center>
         <rsweb:ReportViewer ID="RVEmpresa" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="427px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="75%" style="margin-right: 0px"><LocalReport ReportPath="EMP\RptEmpresa.rdlc"></LocalReport></rsweb:ReportViewer></center>
-       <div align="center"><br /><asp:Button ID="BtnCerrarFicha" runat="server" Text="Cerrar" /></div>
+       <div align="center"><br /><br /><asp:Button ID="BtnCerrarFicha" runat="server" Text="Cerrar" /></div>
              </asp:Panel>
           <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender2" runat="server" PopupControlID="PanelFicha" BackgroundCssClass="modalBackround" TargetControlID="BtnFicha" CancelControlID="BtnCerrarFicha"></ajaxToolkit:ModalPopupExtender>
  
