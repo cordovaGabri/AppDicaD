@@ -3063,6 +3063,14 @@ namespace ClsDataSets {
             
             private global::System.Data.DataColumn columnID_CONSULTORIA;
             
+            private global::System.Data.DataColumn columnCD_ESTADO_ENTREGABLE;
+            
+            private global::System.Data.DataColumn columnURL_ENTREGABLE;
+            
+            private global::System.Data.DataColumn columnDS_OBSERVACION_ENTREGABLE;
+            
+            private global::System.Data.DataColumn columnID_ASPIRANTE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_CONSULTORIA_ENTREGABLEDataTable() {
@@ -3146,6 +3154,38 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CD_ESTADO_ENTREGABLEColumn {
+                get {
+                    return this.columnCD_ESTADO_ENTREGABLE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn URL_ENTREGABLEColumn {
+                get {
+                    return this.columnURL_ENTREGABLE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_OBSERVACION_ENTREGABLEColumn {
+                get {
+                    return this.columnDS_OBSERVACION_ENTREGABLE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_ASPIRANTEColumn {
+                get {
+                    return this.columnID_ASPIRANTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3181,7 +3221,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_CONSULTORIA_ENTREGABLERow AddTB_CONSULTORIA_ENTREGABLERow(string ID, string DS_ENTREGABLE, string DS_DESCRIPCION_ENT, string FECH_ENTREGA_ENT, string DS_DURACION_ENT, string ID_CONSULTORIA) {
+            public TB_CONSULTORIA_ENTREGABLERow AddTB_CONSULTORIA_ENTREGABLERow(string ID, string DS_ENTREGABLE, string DS_DESCRIPCION_ENT, string FECH_ENTREGA_ENT, string DS_DURACION_ENT, string ID_CONSULTORIA, string CD_ESTADO_ENTREGABLE, string URL_ENTREGABLE, string DS_OBSERVACION_ENTREGABLE, string ID_ASPIRANTE) {
                 TB_CONSULTORIA_ENTREGABLERow rowTB_CONSULTORIA_ENTREGABLERow = ((TB_CONSULTORIA_ENTREGABLERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -3189,7 +3229,11 @@ namespace ClsDataSets {
                         DS_DESCRIPCION_ENT,
                         FECH_ENTREGA_ENT,
                         DS_DURACION_ENT,
-                        ID_CONSULTORIA};
+                        ID_CONSULTORIA,
+                        CD_ESTADO_ENTREGABLE,
+                        URL_ENTREGABLE,
+                        DS_OBSERVACION_ENTREGABLE,
+                        ID_ASPIRANTE};
                 rowTB_CONSULTORIA_ENTREGABLERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTB_CONSULTORIA_ENTREGABLERow);
                 return rowTB_CONSULTORIA_ENTREGABLERow;
@@ -3218,6 +3262,10 @@ namespace ClsDataSets {
                 this.columnFECH_ENTREGA_ENT = base.Columns["FECH_ENTREGA_ENT"];
                 this.columnDS_DURACION_ENT = base.Columns["DS_DURACION_ENT"];
                 this.columnID_CONSULTORIA = base.Columns["ID_CONSULTORIA"];
+                this.columnCD_ESTADO_ENTREGABLE = base.Columns["CD_ESTADO_ENTREGABLE"];
+                this.columnURL_ENTREGABLE = base.Columns["URL_ENTREGABLE"];
+                this.columnDS_OBSERVACION_ENTREGABLE = base.Columns["DS_OBSERVACION_ENTREGABLE"];
+                this.columnID_ASPIRANTE = base.Columns["ID_ASPIRANTE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3235,6 +3283,14 @@ namespace ClsDataSets {
                 base.Columns.Add(this.columnDS_DURACION_ENT);
                 this.columnID_CONSULTORIA = new global::System.Data.DataColumn("ID_CONSULTORIA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_CONSULTORIA);
+                this.columnCD_ESTADO_ENTREGABLE = new global::System.Data.DataColumn("CD_ESTADO_ENTREGABLE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCD_ESTADO_ENTREGABLE);
+                this.columnURL_ENTREGABLE = new global::System.Data.DataColumn("URL_ENTREGABLE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnURL_ENTREGABLE);
+                this.columnDS_OBSERVACION_ENTREGABLE = new global::System.Data.DataColumn("DS_OBSERVACION_ENTREGABLE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_OBSERVACION_ENTREGABLE);
+                this.columnID_ASPIRANTE = new global::System.Data.DataColumn("ID_ASPIRANTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_ASPIRANTE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_CONSULTORIA_ENTREGABLEKey1", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
                 this.columnID.Unique = true;
@@ -3377,6 +3433,8 @@ namespace ClsDataSets {
             
             private global::System.Data.DataColumn columnDS_ESTADO;
             
+            private global::System.Data.DataColumn columnDS_PASANTIA;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_PASANTIA_ASPIRANTEDataTable() {
@@ -3436,6 +3494,14 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_PASANTIAColumn {
+                get {
+                    return this.columnDS_PASANTIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3471,12 +3537,13 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_ASPIRANTERow AddTB_PASANTIA_ASPIRANTERow(string ID, string DS_NOMBRE, string DS_ESTADO) {
+            public TB_PASANTIA_ASPIRANTERow AddTB_PASANTIA_ASPIRANTERow(string ID, string DS_NOMBRE, string DS_ESTADO, string DS_PASANTIA) {
                 TB_PASANTIA_ASPIRANTERow rowTB_PASANTIA_ASPIRANTERow = ((TB_PASANTIA_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         DS_NOMBRE,
-                        DS_ESTADO};
+                        DS_ESTADO,
+                        DS_PASANTIA};
                 rowTB_PASANTIA_ASPIRANTERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTB_PASANTIA_ASPIRANTERow);
                 return rowTB_PASANTIA_ASPIRANTERow;
@@ -3502,6 +3569,7 @@ namespace ClsDataSets {
                 this.columnID = base.Columns["ID"];
                 this.columnDS_NOMBRE = base.Columns["DS_NOMBRE"];
                 this.columnDS_ESTADO = base.Columns["DS_ESTADO"];
+                this.columnDS_PASANTIA = base.Columns["DS_PASANTIA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3513,6 +3581,8 @@ namespace ClsDataSets {
                 base.Columns.Add(this.columnDS_NOMBRE);
                 this.columnDS_ESTADO = new global::System.Data.DataColumn("DS_ESTADO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDS_ESTADO);
+                this.columnDS_PASANTIA = new global::System.Data.DataColumn("DS_PASANTIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_PASANTIA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_PASANTIA_ASPIRANTEKey1", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
                 this.columnID.Unique = true;
@@ -5731,6 +5801,74 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CD_ESTADO_ENTREGABLE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA_ENTREGABLE.CD_ESTADO_ENTREGABLEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CD_ESTADO_ENTREGABLE\' de la tabla \'TB_CONSULTORIA_ENTREGA" +
+                                "BLE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA_ENTREGABLE.CD_ESTADO_ENTREGABLEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string URL_ENTREGABLE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA_ENTREGABLE.URL_ENTREGABLEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'URL_ENTREGABLE\' de la tabla \'TB_CONSULTORIA_ENTREGABLE\' e" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA_ENTREGABLE.URL_ENTREGABLEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_OBSERVACION_ENTREGABLE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA_ENTREGABLE.DS_OBSERVACION_ENTREGABLEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_OBSERVACION_ENTREGABLE\' de la tabla \'TB_CONSULTORIA_EN" +
+                                "TREGABLE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA_ENTREGABLE.DS_OBSERVACION_ENTREGABLEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_ASPIRANTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA_ENTREGABLE.ID_ASPIRANTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ASPIRANTE\' de la tabla \'TB_CONSULTORIA_ENTREGABLE\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA_ENTREGABLE.ID_ASPIRANTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.IDColumn);
             }
@@ -5800,6 +5938,54 @@ namespace ClsDataSets {
             public void SetID_CONSULTORIANull() {
                 this[this.tableTB_CONSULTORIA_ENTREGABLE.ID_CONSULTORIAColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCD_ESTADO_ENTREGABLENull() {
+                return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.CD_ESTADO_ENTREGABLEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCD_ESTADO_ENTREGABLENull() {
+                this[this.tableTB_CONSULTORIA_ENTREGABLE.CD_ESTADO_ENTREGABLEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsURL_ENTREGABLENull() {
+                return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.URL_ENTREGABLEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetURL_ENTREGABLENull() {
+                this[this.tableTB_CONSULTORIA_ENTREGABLE.URL_ENTREGABLEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_OBSERVACION_ENTREGABLENull() {
+                return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.DS_OBSERVACION_ENTREGABLEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_OBSERVACION_ENTREGABLENull() {
+                this[this.tableTB_CONSULTORIA_ENTREGABLE.DS_OBSERVACION_ENTREGABLEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_ASPIRANTENull() {
+                return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.ID_ASPIRANTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_ASPIRANTENull() {
+                this[this.tableTB_CONSULTORIA_ENTREGABLE.ID_ASPIRANTEColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -5868,6 +6054,23 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_PASANTIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_PASANTIA_ASPIRANTE.DS_PASANTIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_PASANTIA\' de la tabla \'TB_PASANTIA_ASPIRANTE\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_PASANTIA_ASPIRANTE.DS_PASANTIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableTB_PASANTIA_ASPIRANTE.IDColumn);
             }
@@ -5900,6 +6103,18 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_ESTADONull() {
                 this[this.tableTB_PASANTIA_ASPIRANTE.DS_ESTADOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_PASANTIANull() {
+                return this.IsNull(this.tableTB_PASANTIA_ASPIRANTE.DS_PASANTIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_PASANTIANull() {
+                this[this.tableTB_PASANTIA_ASPIRANTE.DS_PASANTIAColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -21,7 +21,7 @@
         <div class="container-fluid">
             <div id="content">
                 <asp:Panel ID="Panel1" runat="server" Width="100%">
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="4" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
 
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
@@ -43,11 +43,8 @@
                     <%--inicio tab informacion adicional--%>
                      <ajaxToolkit:TabPanel runat="server" HeaderText="ESCOLARIDAD" ID="TabPanel2">
                             <ContentTemplate>
-                                <asp:UpdatePanel ID="UPEscolaridad" runat="server"><triggers><asp:AsyncPostBackTrigger ControlID="BtnEscolaridadGuardar" /></triggers><ContentTemplate><br />
-                                    <div class="form-group"><asp:Label ID="Label47" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="CATEGORIA ESCOLARIDAD:"></asp:Label>
-                                    <div class="col-md-3"><asp:DropDownList ID="CboCategoriaEscolaridad" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" OnSelectedIndexChanged="CboCategoriaEscolaridad_SelectedIndexChanged">
-                                    </asp:DropDownList></div>
-                                        <asp:Label ID="Label19" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboNivelEducativo" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ANIO" DataValueField="ID">
+                                <asp:UpdatePanel ID="UPEscolaridad" runat="server"><triggers><asp:AsyncPostBackTrigger ControlID="BtnEscolaridadGuardar" /></triggers><ContentTemplate><br /><div class="form-group"><asp:Label ID="Label47" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="CATEGORIA ESCOLARIDAD:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboCategoriaEscolaridad" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" OnSelectedIndexChanged="CboCategoriaEscolaridad_SelectedIndexChanged">
+                                    </asp:DropDownList></div><asp:Label ID="Label19" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboNivelEducativo" runat="server" AutoPostBack="True" class="form-control" DataTextField="DS_ANIO" DataValueField="ID">
                                         </asp:DropDownList></div></div><div class="form-group"><asp:Label ID="Label28" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="OPCION ACADEMICA:"></asp:Label><div class="col-md-9"><asp:DropDownList ID="CboOpcionAcademica" runat="server" class="form-control" DataTextField="DS_CARRERA" DataValueField="ID">
                                         </asp:DropDownList></div></div><div class="form-group"><asp:Label ID="Label20" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="INSTITUCION EDUCATIVA:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboInstitucion" runat="server" class="form-control" DataTextField="DS_CENTRO_ESCOLAR" DataValueField="ID">
                                         </asp:DropDownList></div><asp:Label ID="Label21" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="OTRA INSTITUCION:"></asp:Label><div class="col-md-3"><asp:TextBox ID="TxtOtraInstitucion" runat="server" AutoCompleteType="Disabled" class="form-control"></asp:TextBox></div></div><div class="form-group"><asp:Label ID="Label27" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="PAIS:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboPaisEscolaridad" runat="server" class="form-control" DataTextField="DS_PAIS" DataValueField="ID">
@@ -110,6 +107,33 @@
                            <ContentTemplate>
                                <asp:UpdatePanel ID="UPDestreza" runat="server"><triggers><asp:AsyncPostBackTrigger ControlID="BtnGuardarDestreza" /></triggers><ContentTemplate><br /><div class="form-group"><asp:Label ID="Label42" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="DESTREZA:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboDestreza" runat="server" class="form-control" DataTextField="DS_DESTREZA" DataValueField="ID">
                                    </asp:DropDownList></div></div><div align="center"><asp:Button ID="BtnGuardarDestreza" runat="server" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click" Text="GUARDAR" />&#160;<asp:Button ID="BtnCancelarDestreza" runat="server" CausesValidation="False" class="btn btn-primary" Text="CANCELAR" /></div><br /><asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVDestreza_RowDeleting" Width="100%"><AlternatingRowStyle BackColor="White" /><Columns><asp:TemplateField HeaderText="" Visible="false"><ItemTemplate><asp:TextBox ID="TxtIDDestreza" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
+                                   </ItemTemplate>
+                                   </asp:TemplateField><asp:BoundField DataField="DS_DESTREZA" HeaderText="DESTREZA" /><asp:TemplateField HeaderText="Eliminar"><ItemTemplate><asp:Button ID="BtnEliminarDestreza" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
+                                   </ItemTemplate>
+                                   </asp:TemplateField>
+                                   </Columns>
+                                   <EditRowStyle BackColor="#2461BF" />
+                                   <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                   <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                   <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                   <RowStyle BackColor="#EFF3FB" />
+                                   <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                   <sortedascendingcellstyle backcolor="#F5F7FB" />
+                                   <sortedascendingheaderstyle backcolor="#6D95E1" />
+                                   <sorteddescendingcellstyle backcolor="#E9EBEF" />
+                                   <sorteddescendingheaderstyle backcolor="#4870BE" />
+                                   </asp:GridView>
+                                   </ContentTemplate>
+                               </asp:UpdatePanel>
+                           </ContentTemplate>
+            </ajaxToolkit:TabPanel>
+                    <%--fin tab habilidades--%>
+                    <%--<div class="tab-pane" id="Destre">--%>
+                    <%--inicio tab destrezas--%>
+                      <ajaxToolkit:TabPanel runat="server" HeaderText="ENTREGABLE" ID="TabPanel6">
+                           <ContentTemplate>
+                               <asp:UpdatePanel ID="UpdatePanel1" runat="server"><triggers><asp:AsyncPostBackTrigger ControlID="BtnGuardarEntregable" /></triggers><ContentTemplate><br /><div class="form-group"><asp:Label ID="Label48" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="DESTREZA:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="DropDownList1" runat="server" class="form-control" DataTextField="DS_DESTREZA" DataValueField="ID">
+                                   </asp:DropDownList></div></div><div align="center"><asp:Button ID="BtnGuardarEntregable" runat="server" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click" Text="GUARDAR" />&#160;<asp:Button ID="Button2" runat="server" CausesValidation="False" class="btn btn-primary" Text="CANCELAR" /></div><br /><asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVDestreza_RowDeleting" Width="100%"><AlternatingRowStyle BackColor="White" /><Columns><asp:TemplateField HeaderText="" Visible="false"><ItemTemplate><asp:TextBox ID="TxtIDDestreza" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
                                    </ItemTemplate>
                                    </asp:TemplateField><asp:BoundField DataField="DS_DESTREZA" HeaderText="DESTREZA" /><asp:TemplateField HeaderText="Eliminar"><ItemTemplate><asp:Button ID="BtnEliminarDestreza" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
                                    </ItemTemplate>

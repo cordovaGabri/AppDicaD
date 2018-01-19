@@ -708,6 +708,13 @@ namespace MyMainApp
                 DateTime.Now, "", DateTime.Now, 2).TB_DESTREZA_ASPIRANTE);
             dt4 = dvDestreza.ToTable();
             RVFichaAspirante.LocalReport.DataSources.Add(new ReportDataSource("TB_DESTREZA_ASPIRANTE", dt4));
+
+            DataTable dt5;
+            CPasantiaAspirante objPasantiaAspirante = new CPasantiaAspirante(_DataSistema.ConexionBaseDato);
+            DataView dvPasantiaAspirante = new DataView(objPasantiaAspirante.Detalle(0, "", 0, "", DateTime.Now, "",
+                DateTime.Now, 2).TB_PASANTIA_ASPIRANTE);
+            dt5 = dvPasantiaAspirante.ToTable();
+            RVFichaAspirante.LocalReport.DataSources.Add(new ReportDataSource("TB_PASANTIA_ASPIRANTE", dt5));
         }
 
     }

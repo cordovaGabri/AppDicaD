@@ -16,7 +16,8 @@ namespace ClsDataApp
         }
 
         public ClsDataSets.DS_TB_EMP Detalle(int Id, int IdConsultoria, string NombEntregable, string Descripcion, DateTime FechEntrega,
-            string Duracion, string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
+            string Duracion, char EstadoEntregable, string UrlEntregable, string ObservacionEntregable, string IdAspirante, string UsuaCrea, 
+            DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
             try
@@ -32,6 +33,10 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DESCRIPCION_ENT", Descripcion);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ENTREGA_ENT", FechEntrega);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DURACION_ENT", Duracion);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO_ENTREGABLE", EstadoEntregable);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@URL_ENTREGABLE", UrlEntregable);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_OBSERVACION_ENTREGABLE", ObservacionEntregable);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
@@ -54,7 +59,8 @@ namespace ClsDataApp
             return objDataSet;
         }
         public DataQuery Actualizacion(int Id, int IdConsultoria, string NombEntregable, string Descripcion, DateTime FechEntrega,
-            string Duracion, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+            string Duracion, char EstadoEntregable, string UrlEntregable, string ObservacionEntregable, string IdAspirante, 
+            string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
             try
@@ -67,7 +73,7 @@ namespace ClsDataApp
                         StrCommand = "SP_TB_CONSULTORIA_ENTREGABLE_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TB_CONSULTORIA_ENTREGABLE_UPDATE";
                         break;
                     case TipoActualizacion.Eliminar:
                         StrCommand = "";
@@ -98,6 +104,11 @@ namespace ClsDataApp
                 ObjCommand.Parameters.AddWithValue("@DS_ENTREGABLE", NombEntregable);
                 ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION_ENT", Descripcion);
                 ObjCommand.Parameters.AddWithValue("@FECH_ENTREGA_ENT", FechEntrega);
+                ObjCommand.Parameters.AddWithValue("@DS_DURACION_ENT", Duracion);
+                ObjCommand.Parameters.AddWithValue("@CD_ESTADO_ENTREGABLE", EstadoEntregable);
+                ObjCommand.Parameters.AddWithValue("@URL_ENTREGABLE", UrlEntregable);
+                ObjCommand.Parameters.AddWithValue("@DS_OBSERVACION_ENTREGABLE", ObservacionEntregable);
+                ObjCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
                 ObjCommand.Parameters.AddWithValue("@DS_DURACION_ENT", Duracion);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
