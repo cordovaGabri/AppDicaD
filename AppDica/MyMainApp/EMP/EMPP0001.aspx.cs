@@ -615,6 +615,13 @@ namespace MyMainApp.EMP
             "", "", "", 'A', 0, 0, 0, 0, 0, "", "", "", DateTime.Now, "", DateTime.Now, 3).TB_PASANTIA);
             dtP = dvPasantia.ToTable();
             RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_PASANTIA", dtP));
+
+            DataTable dtPR;
+            CConsultoria objConsultoria = new CConsultoria(_DataSistema.ConexionBaseDato);
+            DataView dvConsultoria = new DataView(objConsultoria.Detalle(Convert.ToInt32(TxtIdProyecto.Text), TxtContrato.Text, "", TxtDescProyecto.Text, DateTime.Now, 0, TxtDuracionC.Text,
+                Convert.ToChar(CboEstadoPro.SelectedValue), Convert.ToInt32(TxtIDEmpresa.Text), _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 4).TB_CONSULTORIA);
+            dtPR = dvConsultoria.ToTable();
+            RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_CONSULTORIA", dtPR));
         }
     }
 }
