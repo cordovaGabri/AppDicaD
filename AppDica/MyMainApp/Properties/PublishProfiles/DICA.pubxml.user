@@ -9,22 +9,58 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="ASP/ASPP0001.aspx">
-      <publishTime>12/13/2017 17:22:08</publishTime>
+      <publishTime>01/22/2018 09:24:53</publishTime>
+    </File>
+    <File Include="ASP/FichaAspirante.aspx">
+      <publishTime>01/04/2018 09:27:38</publishTime>
+    </File>
+    <File Include="ASP/RptFichaAspirante.rdlc">
+      <publishTime>01/19/2018 09:43:34</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>12/28/2017 16:35:11</publishTime>
     </File>
     <File Include="bin/ClsDataApp.dll">
-      <publishTime>12/19/2017 17:16:20</publishTime>
+      <publishTime>01/22/2018 09:25:07</publishTime>
     </File>
     <File Include="bin/ClsDataSets.dll">
-      <publishTime>12/19/2017 17:16:19</publishTime>
+      <publishTime>01/19/2018 15:05:57</publishTime>
     </File>
     <File Include="bin/ClsInterface.dll">
-      <publishTime>12/19/2017 17:16:19</publishTime>
+      <publishTime>01/19/2018 15:05:56</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:52:52</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:51:00</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:49:30</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:51:32</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:57:20</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:50:38</publishTime>
     </File>
     <File Include="bin/Microsoft.CSharp.dll">
       <publishTime>11/05/2015 20:36:48</publishTime>
     </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>06/24/2012 13:52:52</publishTime>
+    </File>
     <File Include="bin/MyMainApp.dll">
-      <publishTime>12/19/2017 17:17:56</publishTime>
+      <publishTime>01/22/2018 09:27:35</publishTime>
+    </File>
+    <File Include="bin/pt/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:52:50</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:53:08</publishTime>
     </File>
     <File Include="bin/System.ComponentModel.DataAnnotations.dll">
       <publishTime>11/05/2015 20:36:48</publishTime>
@@ -71,6 +107,12 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="bin/System.Xml.Linq.dll">
       <publishTime>11/05/2015 20:36:48</publishTime>
     </File>
+    <File Include="bin/zh-CHS/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:53:48</publishTime>
+    </File>
+    <File Include="bin/zh-CHT/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:50:22</publishTime>
+    </File>
     <File Include="css/bootstrap-theme.css">
       <publishTime>11/30/2017 15:00:36</publishTime>
     </File>
@@ -97,6 +139,24 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     </File>
     <File Include="Default.aspx">
       <publishTime>12/07/2017 09:41:05</publishTime>
+    </File>
+    <File Include="EMP/DetalleAspirante.aspx">
+      <publishTime>01/03/2018 14:50:23</publishTime>
+    </File>
+    <File Include="EMP/DetallePasantia.aspx">
+      <publishTime>01/10/2018 10:11:42</publishTime>
+    </File>
+    <File Include="EMP/EMPP0001.aspx">
+      <publishTime>01/19/2018 17:09:59</publishTime>
+    </File>
+    <File Include="EMP/RegistroActividad.aspx">
+      <publishTime>01/09/2018 09:18:25</publishTime>
+    </File>
+    <File Include="EMP/RegistroEntregable.aspx">
+      <publishTime>01/10/2018 16:51:36</publishTime>
+    </File>
+    <File Include="EMP/RptEmpresa.rdlc">
+      <publishTime>01/19/2018 17:06:23</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>11/30/2017 15:00:51</publishTime>
@@ -176,20 +236,32 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="js/npm.js">
       <publishTime>11/30/2017 15:02:37</publishTime>
     </File>
+    <File Include="js/validaciones.js">
+      <publishTime>01/15/2018 16:52:03</publishTime>
+    </File>
     <File Include="login.aspx">
       <publishTime>12/19/2017 16:58:29</publishTime>
+    </File>
+    <File Include="Logout.aspx">
+      <publishTime>12/19/2017 17:37:38</publishTime>
     </File>
     <File Include="MasterInicio.Master">
       <publishTime>12/11/2017 11:07:38</publishTime>
     </File>
     <File Include="MasterProceso.master">
-      <publishTime>12/11/2017 17:48:07</publishTime>
+      <publishTime>01/03/2018 14:45:49</publishTime>
     </File>
     <File Include="Registro.aspx">
-      <publishTime>12/19/2017 10:34:17</publishTime>
+      <publishTime>01/10/2018 12:08:23</publishTime>
+    </File>
+    <File Include="TEC/TEC0002.aspx">
+      <publishTime>01/10/2018 10:11:43</publishTime>
+    </File>
+    <File Include="TEC/TECC0001.aspx">
+      <publishTime>01/19/2018 10:50:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/19/2017 17:16:23</publishTime>
+      <publishTime>01/22/2018 09:25:13</publishTime>
     </File>
   </ItemGroup>
 </Project>
