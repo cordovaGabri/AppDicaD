@@ -54,6 +54,7 @@ namespace MyMainApp.EMP
                     TxtIDEmpresa.Text = Convert.ToString(objResultado.CodigoAuxiliar);
                 }
                 FillCamposDatosGenerales();
+                DespliegaMensajeUpdatePanel("Registro Guardado", UPDatoGeneral);
             }
             catch (Exception ex)
             {
@@ -571,9 +572,11 @@ namespace MyMainApp.EMP
 
             if (dvConsultoria.Count > 0)
             {
+                TxtTituloProyecto.Text = dvConsultoria.Table.Rows[0]["DS_NOMBRE_CONSULTORIA"].ToString();
+                LblProyecto.Text = TxtTituloProyecto.Text;
                 TxtContrato.Text = dvConsultoria.Table.Rows[0]["DS_NUMERO_CONTRATO"].ToString();
                 TxtDuracionC.Text = dvConsultoria.Table.Rows[0]["DS_CONTRATO_DURACION"].ToString();
-                TxtDescProyecto.Text = dvConsultoria.Table.Rows[0]["DS_NOMBRE_CONSULTORIA"].ToString();
+                TxtDescProyecto.Text = dvConsultoria.Table.Rows[0]["DS_DESCRIPCION"].ToString();
                 TxtFechIniCont.Text = (dvConsultoria.Table.Rows[0]["FECH_INICIO_CONTRATO"].ToString()).Substring(0,10);
                 CboEstadoPro.SelectedValue = dvConsultoria.Table.Rows[0]["CD_ESTADO"].ToString();
                 TxtMontoPro.Text = dvConsultoria.Table.Rows[0]["NM_MONTO_CONSULTORIA"].ToString();
@@ -604,6 +607,21 @@ namespace MyMainApp.EMP
             TxtNombRepre.Text, TxtEmailRep.Text, TxtNitRep.Text, TxtDuiRep.Text, 0, _DataSistema.Cusuario, _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 4).TB_EMPRESA);
             dtE = dvEmpresa.ToTable();
             RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_EMPRESA", dtE));
+
+
+            DataTable dtP;
+            CPasantia objPasantia = new CPasantia(_DataSistema.ConexionBaseDato);
+            DataView dvPasantia = new DataView(objPasantia.Detalle(0, "", "", Convert.ToInt32(TxtIDEmpresa.Text), 0, "", "", DateTime.Now,
+            "", "", "", 'A', 0, 0, 0, 0, 0, "", "", "", DateTime.Now, "", DateTime.Now, 3).TB_PASANTIA);
+            dtP = dvPasantia.ToTable();
+            RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_PASANTIA", dtP));
+
+            DataTable dtPR;
+            CConsultoria objConsultoria = new CConsultoria(_DataSistema.ConexionBaseDato);
+            DataView dvConsultoria = new DataView(objConsultoria.Detalle(Convert.ToInt32(TxtIdProyecto.Text), TxtContrato.Text, "", TxtDescProyecto.Text, DateTime.Now, 0, TxtDuracionC.Text,
+                Convert.ToChar(CboEstadoPro.SelectedValue), Convert.ToInt32(TxtIDEmpresa.Text), _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 4).TB_CONSULTORIA);
+            dtPR = dvConsultoria.ToTable();
+            RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_CONSULTORIA", dtPR));
         }
     }
 }

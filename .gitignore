@@ -73,6 +73,13 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+*.cache
+*.pdb
+ClsDataApp.dll
+ClsDataSets.dll
+ClsInterface.dll
+MyMainApp.dll
+*.suo
 
 # Chutzpah Test files
 _Chutzpah*

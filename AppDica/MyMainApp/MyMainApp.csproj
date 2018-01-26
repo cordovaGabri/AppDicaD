@@ -104,6 +104,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\menu.css" />
     <Content Include="Default.aspx" />
     <Content Include="EMP\DetalleAspirante.aspx" />
     <Content Include="EMP\DetallePasantia.aspx" />
@@ -275,8 +276,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ASP\RptFichaAspirante.rdlc" />
-    <EmbeddedResource Include="EMP\RptEmpresa.rdlc" />
+    <Content Include="ASP\RptFichaAspirante.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EMP\RptEmpresa.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>

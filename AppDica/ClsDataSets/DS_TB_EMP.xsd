@@ -95,6 +95,7 @@
               <xs:element name="NM_MONTO_CONSULTORIA" msprop:Generator_ColumnVarNameInTable="columnNM_MONTO_CONSULTORIA" msprop:Generator_ColumnPropNameInRow="NM_MONTO_CONSULTORIA" msprop:Generator_ColumnPropNameInTable="NM_MONTO_CONSULTORIAColumn" msprop:Generator_UserColumnName="NM_MONTO_CONSULTORIA" type="xs:string" minOccurs="0" />
               <xs:element name="DS_CONTRATO_DURACION" msprop:Generator_ColumnVarNameInTable="columnDS_CONTRATO_DURACION" msprop:Generator_ColumnPropNameInRow="DS_CONTRATO_DURACION" msprop:Generator_ColumnPropNameInTable="DS_CONTRATO_DURACIONColumn" msprop:Generator_UserColumnName="DS_CONTRATO_DURACION" type="xs:string" minOccurs="0" />
               <xs:element name="DS_ESTADO" msprop:Generator_ColumnVarNameInTable="columnDS_ESTADO" msprop:Generator_ColumnPropNameInRow="DS_ESTADO" msprop:Generator_ColumnPropNameInTable="DS_ESTADOColumn" msprop:Generator_UserColumnName="DS_ESTADO" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDS_DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DS_DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DS_DESCRIPCIONColumn" msprop:Generator_UserColumnName="DS_DESCRIPCION" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -123,6 +124,7 @@
               <xs:element name="URL_ENTREGABLE" msprop:Generator_ColumnVarNameInTable="columnURL_ENTREGABLE" msprop:Generator_ColumnPropNameInRow="URL_ENTREGABLE" msprop:Generator_ColumnPropNameInTable="URL_ENTREGABLEColumn" msprop:Generator_UserColumnName="URL_ENTREGABLE" type="xs:string" minOccurs="0" />
               <xs:element name="DS_OBSERVACION_ENTREGABLE" msprop:Generator_ColumnVarNameInTable="columnDS_OBSERVACION_ENTREGABLE" msprop:Generator_ColumnPropNameInRow="DS_OBSERVACION_ENTREGABLE" msprop:Generator_ColumnPropNameInTable="DS_OBSERVACION_ENTREGABLEColumn" msprop:Generator_UserColumnName="DS_OBSERVACION_ENTREGABLE" type="xs:string" minOccurs="0" />
               <xs:element name="ID_ASPIRANTE" msprop:Generator_ColumnVarNameInTable="columnID_ASPIRANTE" msprop:Generator_ColumnPropNameInRow="ID_ASPIRANTE" msprop:Generator_ColumnPropNameInTable="ID_ASPIRANTEColumn" msprop:Generator_UserColumnName="ID_ASPIRANTE" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_NOMBRE_CONSULTORIA" msprop:Generator_ColumnVarNameInTable="columnDS_NOMBRE_CONSULTORIA" msprop:Generator_ColumnPropNameInRow="DS_NOMBRE_CONSULTORIA" msprop:Generator_ColumnPropNameInTable="DS_NOMBRE_CONSULTORIAColumn" msprop:Generator_UserColumnName="DS_NOMBRE_CONSULTORIA" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

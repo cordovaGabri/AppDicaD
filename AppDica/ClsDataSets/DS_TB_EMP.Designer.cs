@@ -2411,6 +2411,8 @@ namespace ClsDataSets {
             
             private global::System.Data.DataColumn columnDS_ESTADO;
             
+            private global::System.Data.DataColumn columnDS_DESCRIPCION;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_CONSULTORIADataTable() {
@@ -2502,6 +2504,14 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_DESCRIPCIONColumn {
+                get {
+                    return this.columnDS_DESCRIPCION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2537,7 +2547,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_CONSULTORIARow AddTB_CONSULTORIARow(string ID, string DS_NUMERO_CONTRATO, string DS_NOMBRE_CONSULTORIA, string FECH_INICIO_CONTRATO, string NM_MONTO_CONSULTORIA, string DS_CONTRATO_DURACION, string DS_ESTADO) {
+            public TB_CONSULTORIARow AddTB_CONSULTORIARow(string ID, string DS_NUMERO_CONTRATO, string DS_NOMBRE_CONSULTORIA, string FECH_INICIO_CONTRATO, string NM_MONTO_CONSULTORIA, string DS_CONTRATO_DURACION, string DS_ESTADO, string DS_DESCRIPCION) {
                 TB_CONSULTORIARow rowTB_CONSULTORIARow = ((TB_CONSULTORIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -2546,7 +2556,8 @@ namespace ClsDataSets {
                         FECH_INICIO_CONTRATO,
                         NM_MONTO_CONSULTORIA,
                         DS_CONTRATO_DURACION,
-                        DS_ESTADO};
+                        DS_ESTADO,
+                        DS_DESCRIPCION};
                 rowTB_CONSULTORIARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTB_CONSULTORIARow);
                 return rowTB_CONSULTORIARow;
@@ -2576,6 +2587,7 @@ namespace ClsDataSets {
                 this.columnNM_MONTO_CONSULTORIA = base.Columns["NM_MONTO_CONSULTORIA"];
                 this.columnDS_CONTRATO_DURACION = base.Columns["DS_CONTRATO_DURACION"];
                 this.columnDS_ESTADO = base.Columns["DS_ESTADO"];
+                this.columnDS_DESCRIPCION = base.Columns["DS_DESCRIPCION"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2595,6 +2607,8 @@ namespace ClsDataSets {
                 base.Columns.Add(this.columnDS_CONTRATO_DURACION);
                 this.columnDS_ESTADO = new global::System.Data.DataColumn("DS_ESTADO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDS_ESTADO);
+                this.columnDS_DESCRIPCION = new global::System.Data.DataColumn("DS_DESCRIPCION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_DESCRIPCION);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_CONSULTORIAKey1", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
                 this.columnID.Unique = true;
@@ -3071,6 +3085,8 @@ namespace ClsDataSets {
             
             private global::System.Data.DataColumn columnID_ASPIRANTE;
             
+            private global::System.Data.DataColumn columnDS_NOMBRE_CONSULTORIA;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_CONSULTORIA_ENTREGABLEDataTable() {
@@ -3186,6 +3202,14 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_NOMBRE_CONSULTORIAColumn {
+                get {
+                    return this.columnDS_NOMBRE_CONSULTORIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3221,7 +3245,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_CONSULTORIA_ENTREGABLERow AddTB_CONSULTORIA_ENTREGABLERow(string ID, string DS_ENTREGABLE, string DS_DESCRIPCION_ENT, string FECH_ENTREGA_ENT, string DS_DURACION_ENT, string ID_CONSULTORIA, string CD_ESTADO_ENTREGABLE, string URL_ENTREGABLE, string DS_OBSERVACION_ENTREGABLE, string ID_ASPIRANTE) {
+            public TB_CONSULTORIA_ENTREGABLERow AddTB_CONSULTORIA_ENTREGABLERow(string ID, string DS_ENTREGABLE, string DS_DESCRIPCION_ENT, string FECH_ENTREGA_ENT, string DS_DURACION_ENT, string ID_CONSULTORIA, string CD_ESTADO_ENTREGABLE, string URL_ENTREGABLE, string DS_OBSERVACION_ENTREGABLE, string ID_ASPIRANTE, string DS_NOMBRE_CONSULTORIA) {
                 TB_CONSULTORIA_ENTREGABLERow rowTB_CONSULTORIA_ENTREGABLERow = ((TB_CONSULTORIA_ENTREGABLERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -3233,7 +3257,8 @@ namespace ClsDataSets {
                         CD_ESTADO_ENTREGABLE,
                         URL_ENTREGABLE,
                         DS_OBSERVACION_ENTREGABLE,
-                        ID_ASPIRANTE};
+                        ID_ASPIRANTE,
+                        DS_NOMBRE_CONSULTORIA};
                 rowTB_CONSULTORIA_ENTREGABLERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTB_CONSULTORIA_ENTREGABLERow);
                 return rowTB_CONSULTORIA_ENTREGABLERow;
@@ -3266,6 +3291,7 @@ namespace ClsDataSets {
                 this.columnURL_ENTREGABLE = base.Columns["URL_ENTREGABLE"];
                 this.columnDS_OBSERVACION_ENTREGABLE = base.Columns["DS_OBSERVACION_ENTREGABLE"];
                 this.columnID_ASPIRANTE = base.Columns["ID_ASPIRANTE"];
+                this.columnDS_NOMBRE_CONSULTORIA = base.Columns["DS_NOMBRE_CONSULTORIA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3291,6 +3317,8 @@ namespace ClsDataSets {
                 base.Columns.Add(this.columnDS_OBSERVACION_ENTREGABLE);
                 this.columnID_ASPIRANTE = new global::System.Data.DataColumn("ID_ASPIRANTE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_ASPIRANTE);
+                this.columnDS_NOMBRE_CONSULTORIA = new global::System.Data.DataColumn("DS_NOMBRE_CONSULTORIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_NOMBRE_CONSULTORIA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_CONSULTORIA_ENTREGABLEKey1", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
                 this.columnID.Unique = true;
@@ -5413,6 +5441,22 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_DESCRIPCION {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA.DS_DESCRIPCIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DESCRIPCION\' de la tabla \'TB_CONSULTORIA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA.DS_DESCRIPCIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableTB_CONSULTORIA.IDColumn);
             }
@@ -5493,6 +5537,18 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_ESTADONull() {
                 this[this.tableTB_CONSULTORIA.DS_ESTADOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_DESCRIPCIONNull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.DS_DESCRIPCIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_DESCRIPCIONNull() {
+                this[this.tableTB_CONSULTORIA.DS_DESCRIPCIONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5869,6 +5925,23 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_NOMBRE_CONSULTORIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA_ENTREGABLE.DS_NOMBRE_CONSULTORIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NOMBRE_CONSULTORIA\' de la tabla \'TB_CONSULTORIA_ENTREG" +
+                                "ABLE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA_ENTREGABLE.DS_NOMBRE_CONSULTORIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.IDColumn);
             }
@@ -5985,6 +6058,18 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetID_ASPIRANTENull() {
                 this[this.tableTB_CONSULTORIA_ENTREGABLE.ID_ASPIRANTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_NOMBRE_CONSULTORIANull() {
+                return this.IsNull(this.tableTB_CONSULTORIA_ENTREGABLE.DS_NOMBRE_CONSULTORIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_NOMBRE_CONSULTORIANull() {
+                this[this.tableTB_CONSULTORIA_ENTREGABLE.DS_NOMBRE_CONSULTORIAColumn] = global::System.Convert.DBNull;
             }
         }
         
