@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
 using System.Web;
 using ClsInterface;
 
@@ -15,11 +16,11 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TBC Detalle(int Id, string MailFrom, string MailHead, string smtp, string Port,
+        public ClsDataSets.DS_TBC_SIS Detalle(int Id, string MailFrom, string MailHead, string smtp, int Port,
              string Mail, string Pass,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
-            ClsDataSets.DS_TBC objDataSet = new ClsDataSets.DS_TBC();
+            ClsDataSets.DS_TBC_SIS objDataSet = new ClsDataSets.DS_TBC_SIS();
             try
             {
                 ObjConnection = new SqlConnection(_ConexionData);
@@ -55,7 +56,7 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-        public DataQuery Actualizacion(int Id, string MailFrom, string MailHead, string smtp, string Port,
+        public DataQuery Actualizacion(int Id, string MailFrom, string MailHead, string smtp, int Port,
              string Mail, string Pass, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
@@ -138,6 +139,27 @@ namespace ClsDataApp
 
             return objResultado;
 
+        }
+
+        public void SendMail(string MailFrom, string MailHead, string smtp, int Port,
+             string Mail, string Pass, string Asunto, string Body,string Correos) 
+        {
+            System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
+            mail.To.Add(Correos);
+            mail.From = new MailAddress(MailFrom, MailHead, System.Text.Encoding.UTF8);
+            mail.Subject = Asunto;
+            mail.SubjectEncoding = System.Text.Encoding.UTF8;
+            mail.Body = Body;
+            mail.BodyEncoding = System.Text.Encoding.UTF8;
+            mail.IsBodyHtml = true;
+            mail.Priority = MailPriority.High;
+            SmtpClient client = new SmtpClient();
+            client.Credentials = new System.Net.NetworkCredential(Mail, Pass);
+            client.Port = Port;
+            client.Host = smtp;
+            client.EnableSsl = true;
+
+            client.Send(mail);
         }
     }
 }

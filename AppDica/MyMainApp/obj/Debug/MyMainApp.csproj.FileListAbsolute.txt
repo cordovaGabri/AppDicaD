@@ -127,3 +127,5 @@ C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Debug\RdlCompile.
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Debug\MyMainApp.dll
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Debug\MyMainApp.pdb
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Debug\MyMainApp.dll.licenses
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\bin\ASP\RptFichaAspirante.rdlc
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\bin\EMP\RptEmpresa.rdlc

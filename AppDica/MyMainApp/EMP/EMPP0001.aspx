@@ -604,7 +604,7 @@
                                                     <asp:TemplateField HeaderText="ENTREGABLES">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BtnVerEntregable" runat="server" CommandName="Select"
-                                                                Text="Ver Entregables" OnClientClick="ShowModalPopup()" />
+                                                                Text="Ver Entregables" />
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                 </Columns>
