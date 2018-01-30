@@ -18,7 +18,7 @@ namespace MyMainApp
     {
         private DataView dvTituloAcademico, dvPais, dvDepartamento, dvMunicipio, dvTipoDocumento, dvDestreza,
             dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion,
-            dvEscolaridad, dvHabilidad, dvDocumento, dvPantallas, dvEntregables, dvCategoriaEscolaridad;
+            dvEscolaridad, dvHabilidad, dvDocumento, dvPantallas, dvEntregables, dvCategoriaEscolaridad, dvListaPasantia;
         private DataSet dsEscolaridad, dsPantalla;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
@@ -82,6 +82,7 @@ namespace MyMainApp
             FillGVDocumento();
             FillRepresentanteLegal();
             FillGVEntregables();
+            FillGVPasantia();
             CargarReporte();
         }
 
@@ -387,6 +388,16 @@ namespace MyMainApp
             GVEntregable.DataSource = dvEntregables;
             GVEntregable.DataBind();
         }
+
+        private void FillGVPasantia()
+        {
+            CActividadAspirante objActividad = new CActividadAspirante(_DataSistema.ConexionBaseDato);
+            dvListaPasantia = new DataView(objActividad.Detalle(0,_DataSistema.Cusuario,0,"",'X',"",_DataSistema.Cusuario,DateTime.Today,_DataSistema.Cusuario,DateTime.Today,2).TB_ACTIVIDAD_ASPIRANTE);
+
+            GVListaPasantia.DataSource = dvListaPasantia;
+            GVListaPasantia.DataBind();
+        }
+
 
         protected void FillGVDestreza()
         {

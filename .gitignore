@@ -299,3 +299,7 @@ AppDica/ClsDataApp/ClsDataApp.csproj
 AppDica/MyMainApp/TEC/TEC0001.aspx.cs
 *.suo
 AppDica/AppDica.v11.suo
+*.suo
+*.dll
+*.pdb
+*.cache
