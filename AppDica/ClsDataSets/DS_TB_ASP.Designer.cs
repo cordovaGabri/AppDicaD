@@ -36,6 +36,10 @@ namespace ClsDataSets {
         
         private TBC_REPRESENTANTE_LEGALDataTable tableTBC_REPRESENTANTE_LEGAL;
         
+        private TB_ACEPTACION_HORARIODataTable tableTB_ACEPTACION_HORARIO;
+        
+        private TB_ACEPTACION_PASANTIADataTable tableTB_ACEPTACION_PASANTIA;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -81,6 +85,12 @@ namespace ClsDataSets {
                 }
                 if ((ds.Tables["TBC_REPRESENTANTE_LEGAL"] != null)) {
                     base.Tables.Add(new TBC_REPRESENTANTE_LEGALDataTable(ds.Tables["TBC_REPRESENTANTE_LEGAL"]));
+                }
+                if ((ds.Tables["TB_ACEPTACION_HORARIO"] != null)) {
+                    base.Tables.Add(new TB_ACEPTACION_HORARIODataTable(ds.Tables["TB_ACEPTACION_HORARIO"]));
+                }
+                if ((ds.Tables["TB_ACEPTACION_PASANTIA"] != null)) {
+                    base.Tables.Add(new TB_ACEPTACION_PASANTIADataTable(ds.Tables["TB_ACEPTACION_PASANTIA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -157,6 +167,26 @@ namespace ClsDataSets {
         public TBC_REPRESENTANTE_LEGALDataTable TBC_REPRESENTANTE_LEGAL {
             get {
                 return this.tableTBC_REPRESENTANTE_LEGAL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TB_ACEPTACION_HORARIODataTable TB_ACEPTACION_HORARIO {
+            get {
+                return this.tableTB_ACEPTACION_HORARIO;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TB_ACEPTACION_PASANTIADataTable TB_ACEPTACION_PASANTIA {
+            get {
+                return this.tableTB_ACEPTACION_PASANTIA;
             }
         }
         
@@ -245,6 +275,12 @@ namespace ClsDataSets {
                 if ((ds.Tables["TBC_REPRESENTANTE_LEGAL"] != null)) {
                     base.Tables.Add(new TBC_REPRESENTANTE_LEGALDataTable(ds.Tables["TBC_REPRESENTANTE_LEGAL"]));
                 }
+                if ((ds.Tables["TB_ACEPTACION_HORARIO"] != null)) {
+                    base.Tables.Add(new TB_ACEPTACION_HORARIODataTable(ds.Tables["TB_ACEPTACION_HORARIO"]));
+                }
+                if ((ds.Tables["TB_ACEPTACION_PASANTIA"] != null)) {
+                    base.Tables.Add(new TB_ACEPTACION_PASANTIADataTable(ds.Tables["TB_ACEPTACION_PASANTIA"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -314,6 +350,18 @@ namespace ClsDataSets {
                     this.tableTBC_REPRESENTANTE_LEGAL.InitVars();
                 }
             }
+            this.tableTB_ACEPTACION_HORARIO = ((TB_ACEPTACION_HORARIODataTable)(base.Tables["TB_ACEPTACION_HORARIO"]));
+            if ((initTable == true)) {
+                if ((this.tableTB_ACEPTACION_HORARIO != null)) {
+                    this.tableTB_ACEPTACION_HORARIO.InitVars();
+                }
+            }
+            this.tableTB_ACEPTACION_PASANTIA = ((TB_ACEPTACION_PASANTIADataTable)(base.Tables["TB_ACEPTACION_PASANTIA"]));
+            if ((initTable == true)) {
+                if ((this.tableTB_ACEPTACION_PASANTIA != null)) {
+                    this.tableTB_ACEPTACION_PASANTIA.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -336,6 +384,10 @@ namespace ClsDataSets {
             base.Tables.Add(this.tableTB_DOCUMENTO_ASPIRANTE);
             this.tableTBC_REPRESENTANTE_LEGAL = new TBC_REPRESENTANTE_LEGALDataTable();
             base.Tables.Add(this.tableTBC_REPRESENTANTE_LEGAL);
+            this.tableTB_ACEPTACION_HORARIO = new TB_ACEPTACION_HORARIODataTable();
+            base.Tables.Add(this.tableTB_ACEPTACION_HORARIO);
+            this.tableTB_ACEPTACION_PASANTIA = new TB_ACEPTACION_PASANTIADataTable();
+            base.Tables.Add(this.tableTB_ACEPTACION_PASANTIA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -371,6 +423,18 @@ namespace ClsDataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeTBC_REPRESENTANTE_LEGAL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTB_ACEPTACION_HORARIO() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTB_ACEPTACION_PASANTIA() {
             return false;
         }
         
@@ -446,6 +510,12 @@ namespace ClsDataSets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void TBC_REPRESENTANTE_LEGALRowChangeEventHandler(object sender, TBC_REPRESENTANTE_LEGALRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TB_ACEPTACION_HORARIORowChangeEventHandler(object sender, TB_ACEPTACION_HORARIORowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TB_ACEPTACION_PASANTIARowChangeEventHandler(object sender, TB_ACEPTACION_PASANTIARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2629,6 +2699,685 @@ namespace ClsDataSets {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TB_ACEPTACION_HORARIODataTable : global::System.Data.TypedTableBase<TB_ACEPTACION_HORARIORow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnID_ACEPTACION_PASANTIA;
+            
+            private global::System.Data.DataColumn columnLUNES;
+            
+            private global::System.Data.DataColumn columnMARTES;
+            
+            private global::System.Data.DataColumn columnMIERCOLES;
+            
+            private global::System.Data.DataColumn columnJUEVES;
+            
+            private global::System.Data.DataColumn columnVIERNES;
+            
+            private global::System.Data.DataColumn columnSABADO;
+            
+            private global::System.Data.DataColumn columnDOMINGO;
+            
+            private global::System.Data.DataColumn columnHORARIO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_HORARIODataTable() {
+                this.TableName = "TB_ACEPTACION_HORARIO";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_ACEPTACION_HORARIODataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TB_ACEPTACION_HORARIODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_ACEPTACION_PASANTIAColumn {
+                get {
+                    return this.columnID_ACEPTACION_PASANTIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LUNESColumn {
+                get {
+                    return this.columnLUNES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MARTESColumn {
+                get {
+                    return this.columnMARTES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MIERCOLESColumn {
+                get {
+                    return this.columnMIERCOLES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn JUEVESColumn {
+                get {
+                    return this.columnJUEVES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VIERNESColumn {
+                get {
+                    return this.columnVIERNES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SABADOColumn {
+                get {
+                    return this.columnSABADO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DOMINGOColumn {
+                get {
+                    return this.columnDOMINGO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HORARIOColumn {
+                get {
+                    return this.columnHORARIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_HORARIORow this[int index] {
+                get {
+                    return ((TB_ACEPTACION_HORARIORow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_HORARIORowChangeEventHandler TB_ACEPTACION_HORARIORowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_HORARIORowChangeEventHandler TB_ACEPTACION_HORARIORowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_HORARIORowChangeEventHandler TB_ACEPTACION_HORARIORowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_HORARIORowChangeEventHandler TB_ACEPTACION_HORARIORowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTB_ACEPTACION_HORARIORow(TB_ACEPTACION_HORARIORow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_HORARIORow AddTB_ACEPTACION_HORARIORow(string ID, string ID_ACEPTACION_PASANTIA, string LUNES, string MARTES, string MIERCOLES, string JUEVES, string VIERNES, string SABADO, string DOMINGO, string HORARIO) {
+                TB_ACEPTACION_HORARIORow rowTB_ACEPTACION_HORARIORow = ((TB_ACEPTACION_HORARIORow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID,
+                        ID_ACEPTACION_PASANTIA,
+                        LUNES,
+                        MARTES,
+                        MIERCOLES,
+                        JUEVES,
+                        VIERNES,
+                        SABADO,
+                        DOMINGO,
+                        HORARIO};
+                rowTB_ACEPTACION_HORARIORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_ACEPTACION_HORARIORow);
+                return rowTB_ACEPTACION_HORARIORow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TB_ACEPTACION_HORARIODataTable cln = ((TB_ACEPTACION_HORARIODataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TB_ACEPTACION_HORARIODataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnID_ACEPTACION_PASANTIA = base.Columns["ID_ACEPTACION_PASANTIA"];
+                this.columnLUNES = base.Columns["LUNES"];
+                this.columnMARTES = base.Columns["MARTES"];
+                this.columnMIERCOLES = base.Columns["MIERCOLES"];
+                this.columnJUEVES = base.Columns["JUEVES"];
+                this.columnVIERNES = base.Columns["VIERNES"];
+                this.columnSABADO = base.Columns["SABADO"];
+                this.columnDOMINGO = base.Columns["DOMINGO"];
+                this.columnHORARIO = base.Columns["HORARIO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnID_ACEPTACION_PASANTIA = new global::System.Data.DataColumn("ID_ACEPTACION_PASANTIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_ACEPTACION_PASANTIA);
+                this.columnLUNES = new global::System.Data.DataColumn("LUNES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLUNES);
+                this.columnMARTES = new global::System.Data.DataColumn("MARTES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMARTES);
+                this.columnMIERCOLES = new global::System.Data.DataColumn("MIERCOLES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMIERCOLES);
+                this.columnJUEVES = new global::System.Data.DataColumn("JUEVES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJUEVES);
+                this.columnVIERNES = new global::System.Data.DataColumn("VIERNES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVIERNES);
+                this.columnSABADO = new global::System.Data.DataColumn("SABADO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSABADO);
+                this.columnDOMINGO = new global::System.Data.DataColumn("DOMINGO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOMINGO);
+                this.columnHORARIO = new global::System.Data.DataColumn("HORARIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHORARIO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_ACEPTACION_HORARIOKey1", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_HORARIORow NewTB_ACEPTACION_HORARIORow() {
+                return ((TB_ACEPTACION_HORARIORow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TB_ACEPTACION_HORARIORow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TB_ACEPTACION_HORARIORow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TB_ACEPTACION_HORARIORowChanged != null)) {
+                    this.TB_ACEPTACION_HORARIORowChanged(this, new TB_ACEPTACION_HORARIORowChangeEvent(((TB_ACEPTACION_HORARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TB_ACEPTACION_HORARIORowChanging != null)) {
+                    this.TB_ACEPTACION_HORARIORowChanging(this, new TB_ACEPTACION_HORARIORowChangeEvent(((TB_ACEPTACION_HORARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TB_ACEPTACION_HORARIORowDeleted != null)) {
+                    this.TB_ACEPTACION_HORARIORowDeleted(this, new TB_ACEPTACION_HORARIORowChangeEvent(((TB_ACEPTACION_HORARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TB_ACEPTACION_HORARIORowDeleting != null)) {
+                    this.TB_ACEPTACION_HORARIORowDeleting(this, new TB_ACEPTACION_HORARIORowChangeEvent(((TB_ACEPTACION_HORARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTB_ACEPTACION_HORARIORow(TB_ACEPTACION_HORARIORow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS_TB_ASP ds = new DS_TB_ASP();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TB_ACEPTACION_HORARIODataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TB_ACEPTACION_PASANTIADataTable : global::System.Data.TypedTableBase<TB_ACEPTACION_PASANTIARow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnID_ASPIRANTE;
+            
+            private global::System.Data.DataColumn columnID_PASANTIA;
+            
+            private global::System.Data.DataColumn columnDS_RESPUESTA;
+            
+            private global::System.Data.DataColumn columnCD_RESPUESTA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_PASANTIADataTable() {
+                this.TableName = "TB_ACEPTACION_PASANTIA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_ACEPTACION_PASANTIADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TB_ACEPTACION_PASANTIADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_ASPIRANTEColumn {
+                get {
+                    return this.columnID_ASPIRANTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_PASANTIAColumn {
+                get {
+                    return this.columnID_PASANTIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_RESPUESTAColumn {
+                get {
+                    return this.columnDS_RESPUESTA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CD_RESPUESTAColumn {
+                get {
+                    return this.columnCD_RESPUESTA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_PASANTIARow this[int index] {
+                get {
+                    return ((TB_ACEPTACION_PASANTIARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_PASANTIARowChangeEventHandler TB_ACEPTACION_PASANTIARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_PASANTIARowChangeEventHandler TB_ACEPTACION_PASANTIARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_PASANTIARowChangeEventHandler TB_ACEPTACION_PASANTIARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_ACEPTACION_PASANTIARowChangeEventHandler TB_ACEPTACION_PASANTIARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTB_ACEPTACION_PASANTIARow(TB_ACEPTACION_PASANTIARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_PASANTIARow AddTB_ACEPTACION_PASANTIARow(string ID, string ID_ASPIRANTE, string ID_PASANTIA, string DS_RESPUESTA, string CD_RESPUESTA) {
+                TB_ACEPTACION_PASANTIARow rowTB_ACEPTACION_PASANTIARow = ((TB_ACEPTACION_PASANTIARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID,
+                        ID_ASPIRANTE,
+                        ID_PASANTIA,
+                        DS_RESPUESTA,
+                        CD_RESPUESTA};
+                rowTB_ACEPTACION_PASANTIARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_ACEPTACION_PASANTIARow);
+                return rowTB_ACEPTACION_PASANTIARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TB_ACEPTACION_PASANTIADataTable cln = ((TB_ACEPTACION_PASANTIADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TB_ACEPTACION_PASANTIADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnID_ASPIRANTE = base.Columns["ID_ASPIRANTE"];
+                this.columnID_PASANTIA = base.Columns["ID_PASANTIA"];
+                this.columnDS_RESPUESTA = base.Columns["DS_RESPUESTA"];
+                this.columnCD_RESPUESTA = base.Columns["CD_RESPUESTA"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnID_ASPIRANTE = new global::System.Data.DataColumn("ID_ASPIRANTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_ASPIRANTE);
+                this.columnID_PASANTIA = new global::System.Data.DataColumn("ID_PASANTIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_PASANTIA);
+                this.columnDS_RESPUESTA = new global::System.Data.DataColumn("DS_RESPUESTA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_RESPUESTA);
+                this.columnCD_RESPUESTA = new global::System.Data.DataColumn("CD_RESPUESTA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCD_RESPUESTA);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_PASANTIARow NewTB_ACEPTACION_PASANTIARow() {
+                return ((TB_ACEPTACION_PASANTIARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TB_ACEPTACION_PASANTIARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TB_ACEPTACION_PASANTIARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TB_ACEPTACION_PASANTIARowChanged != null)) {
+                    this.TB_ACEPTACION_PASANTIARowChanged(this, new TB_ACEPTACION_PASANTIARowChangeEvent(((TB_ACEPTACION_PASANTIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TB_ACEPTACION_PASANTIARowChanging != null)) {
+                    this.TB_ACEPTACION_PASANTIARowChanging(this, new TB_ACEPTACION_PASANTIARowChangeEvent(((TB_ACEPTACION_PASANTIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TB_ACEPTACION_PASANTIARowDeleted != null)) {
+                    this.TB_ACEPTACION_PASANTIARowDeleted(this, new TB_ACEPTACION_PASANTIARowChangeEvent(((TB_ACEPTACION_PASANTIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TB_ACEPTACION_PASANTIARowDeleting != null)) {
+                    this.TB_ACEPTACION_PASANTIARowDeleting(this, new TB_ACEPTACION_PASANTIARowChangeEvent(((TB_ACEPTACION_PASANTIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTB_ACEPTACION_PASANTIARow(TB_ACEPTACION_PASANTIARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS_TB_ASP ds = new DS_TB_ASP();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TB_ACEPTACION_PASANTIADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class TB_ASPIRANTERow : global::System.Data.DataRow {
@@ -4228,6 +4977,462 @@ namespace ClsDataSets {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TB_ACEPTACION_HORARIORow : global::System.Data.DataRow {
+            
+            private TB_ACEPTACION_HORARIODataTable tableTB_ACEPTACION_HORARIO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_ACEPTACION_HORARIORow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTB_ACEPTACION_HORARIO = ((TB_ACEPTACION_HORARIODataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_ACEPTACION_PASANTIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.ID_ACEPTACION_PASANTIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ACEPTACION_PASANTIA\' de la tabla \'TB_ACEPTACION_HORARI" +
+                                "O\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.ID_ACEPTACION_PASANTIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LUNES {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.LUNESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LUNES\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.LUNESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MARTES {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.MARTESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MARTES\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.MARTESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MIERCOLES {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.MIERCOLESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MIERCOLES\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.MIERCOLESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string JUEVES {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.JUEVESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'JUEVES\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.JUEVESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VIERNES {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.VIERNESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'VIERNES\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.VIERNESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SABADO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.SABADOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'SABADO\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.SABADOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DOMINGO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.DOMINGOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DOMINGO\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.DOMINGOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string HORARIO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_HORARIO.HORARIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HORARIO\' de la tabla \'TB_ACEPTACION_HORARIO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_HORARIO.HORARIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableTB_ACEPTACION_HORARIO.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_ACEPTACION_PASANTIANull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.ID_ACEPTACION_PASANTIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_ACEPTACION_PASANTIANull() {
+                this[this.tableTB_ACEPTACION_HORARIO.ID_ACEPTACION_PASANTIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLUNESNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.LUNESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLUNESNull() {
+                this[this.tableTB_ACEPTACION_HORARIO.LUNESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMARTESNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.MARTESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMARTESNull() {
+                this[this.tableTB_ACEPTACION_HORARIO.MARTESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMIERCOLESNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.MIERCOLESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMIERCOLESNull() {
+                this[this.tableTB_ACEPTACION_HORARIO.MIERCOLESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJUEVESNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.JUEVESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJUEVESNull() {
+                this[this.tableTB_ACEPTACION_HORARIO.JUEVESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVIERNESNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.VIERNESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVIERNESNull() {
+                this[this.tableTB_ACEPTACION_HORARIO.VIERNESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSABADONull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.SABADOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSABADONull() {
+                this[this.tableTB_ACEPTACION_HORARIO.SABADOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDOMINGONull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.DOMINGOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDOMINGONull() {
+                this[this.tableTB_ACEPTACION_HORARIO.DOMINGOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHORARIONull() {
+                return this.IsNull(this.tableTB_ACEPTACION_HORARIO.HORARIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHORARIONull() {
+                this[this.tableTB_ACEPTACION_HORARIO.HORARIOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TB_ACEPTACION_PASANTIARow : global::System.Data.DataRow {
+            
+            private TB_ACEPTACION_PASANTIADataTable tableTB_ACEPTACION_PASANTIA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_ACEPTACION_PASANTIARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTB_ACEPTACION_PASANTIA = ((TB_ACEPTACION_PASANTIADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_PASANTIA.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_ACEPTACION_PASANTIA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_PASANTIA.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_ASPIRANTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_PASANTIA.ID_ASPIRANTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ASPIRANTE\' de la tabla \'TB_ACEPTACION_PASANTIA\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_PASANTIA.ID_ASPIRANTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_PASANTIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_PASANTIA.ID_PASANTIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_PASANTIA\' de la tabla \'TB_ACEPTACION_PASANTIA\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_PASANTIA.ID_PASANTIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_RESPUESTA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_PASANTIA.DS_RESPUESTAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_RESPUESTA\' de la tabla \'TB_ACEPTACION_PASANTIA\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_PASANTIA.DS_RESPUESTAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CD_RESPUESTA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ACEPTACION_PASANTIA.CD_RESPUESTAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CD_RESPUESTA\' de la tabla \'TB_ACEPTACION_PASANTIA\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ACEPTACION_PASANTIA.CD_RESPUESTAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTB_ACEPTACION_PASANTIA.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableTB_ACEPTACION_PASANTIA.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_ASPIRANTENull() {
+                return this.IsNull(this.tableTB_ACEPTACION_PASANTIA.ID_ASPIRANTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_ASPIRANTENull() {
+                this[this.tableTB_ACEPTACION_PASANTIA.ID_ASPIRANTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_PASANTIANull() {
+                return this.IsNull(this.tableTB_ACEPTACION_PASANTIA.ID_PASANTIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_PASANTIANull() {
+                this[this.tableTB_ACEPTACION_PASANTIA.ID_PASANTIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_RESPUESTANull() {
+                return this.IsNull(this.tableTB_ACEPTACION_PASANTIA.DS_RESPUESTAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_RESPUESTANull() {
+                this[this.tableTB_ACEPTACION_PASANTIA.DS_RESPUESTAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCD_RESPUESTANull() {
+                return this.IsNull(this.tableTB_ACEPTACION_PASANTIA.CD_RESPUESTAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCD_RESPUESTANull() {
+                this[this.tableTB_ACEPTACION_PASANTIA.CD_RESPUESTAColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4417,6 +5622,74 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TBC_REPRESENTANTE_LEGALRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TB_ACEPTACION_HORARIORowChangeEvent : global::System.EventArgs {
+            
+            private TB_ACEPTACION_HORARIORow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_HORARIORowChangeEvent(TB_ACEPTACION_HORARIORow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_HORARIORow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TB_ACEPTACION_PASANTIARowChangeEvent : global::System.EventArgs {
+            
+            private TB_ACEPTACION_PASANTIARow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_PASANTIARowChangeEvent(TB_ACEPTACION_PASANTIARow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_ACEPTACION_PASANTIARow Row {
                 get {
                     return this.eventRow;
                 }
