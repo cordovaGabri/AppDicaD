@@ -18,7 +18,7 @@ namespace MyMainApp
     {
         private DataView dvTituloAcademico, dvPais, dvDepartamento, dvMunicipio, dvTipoDocumento, dvDestreza,
             dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion,
-            dvEscolaridad, dvHabilidad, dvDocumento, dvPantallas, dvCategoriaEscolaridad;
+            dvEscolaridad, dvHabilidad, dvDocumento, dvPantallas, dvEntregables, dvCategoriaEscolaridad;
         private DataSet dsEscolaridad, dsPantalla;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
@@ -81,8 +81,11 @@ namespace MyMainApp
             FillGVDestreza();
             FillGVDocumento();
             FillRepresentanteLegal();
+            FillGVEntregables();
             CargarReporte();
         }
+
+        
 
         public void Adicionar() { }
 
@@ -374,6 +377,15 @@ namespace MyMainApp
 
             GVHabilidad.DataSource = dvHabilidad;
             GVHabilidad.DataBind();
+        }
+
+        private void FillGVEntregables()
+        {
+            CConsultoriaEntregable objEntregable = new CConsultoriaEntregable(_DataSistema.ConexionBaseDato);
+            dvEntregables = new DataView(objEntregable.Detalle(0, 0, "", "", DateTime.Today, "", 'X', "", "", _DataSistema.Cusuario, "", DateTime.Today, "", DateTime.Today, 3).TB_CONSULTORIA_ENTREGABLE);
+
+            GVEntregable.DataSource = dvEntregables;
+            GVEntregable.DataBind();
         }
 
         protected void FillGVDestreza()
@@ -717,5 +729,82 @@ namespace MyMainApp
             RVFichaAspirante.LocalReport.DataSources.Add(new ReportDataSource("TB_PASANTIA_ASPIRANTE", dt5));
         }
 
+        protected void GVEntregable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string Id = GVEntregable.SelectedRow.Cells[1].Text;                
+                TxtIdEntregable.Text = Id;
+                FillCamposEntregable();
+                FillGVEntregables();
+                PanelListaEntregable.Visible = false;
+                PanelEntregable.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UUPEntregable);
+            }
+        }
+
+        private void FillCamposEntregable()
+        {            
+            CConsultoriaEntregable objEntregable = new CConsultoriaEntregable(_DataSistema.ConexionBaseDato);
+            dvEntregables = new DataView(objEntregable.Detalle(0, 0, "", "", DateTime.Today, "", 'X', "", "", _DataSistema.Cusuario, "", DateTime.Today, "", DateTime.Today, 3).TB_CONSULTORIA_ENTREGABLE);
+            if (dvEntregables.Count > 0) {                
+                TxtIdConsultoria.Text = dvEntregables.Table.Rows[0]["ID_CONSULTORIA"].ToString();
+                TxtNombreEntregable.Text = dvEntregables.Table.Rows[0]["DS_ENTREGABLE"].ToString();
+                TxtDuracionEntregable.Text = dvEntregables.Table.Rows[0]["DS_DURACION_ENT"].ToString();
+                TxtFechaEntregaEntregable.Text = dvEntregables.Table.Rows[0]["FECH_ENTREGA_ENT"].ToString();
+                TxtDescripcion.Text = dvEntregables.Table.Rows[0]["DS_DESCRIPCION_ENT"].ToString();
+                TxtEstadoEntregable.Text = dvEntregables.Table.Rows[0]["CD_ESTADO_ENTREGABLE"].ToString();
+                TxtNombreConsultoria.Text = dvEntregables.Table.Rows[0]["DS_NOMBRE_CONSULTORIA"].ToString();
+            }
+        }
+
+        protected void BtnGuardarEntregableConsultoria_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string nombreArchivo = _DataSistema.Cusuario + "_" + Convert.ToString(TxtIdConsultoria.Text) + "_" + Convert.ToString(TxtIdEntregable.Text) + "_" + FileEntregable.FileName;
+                CConsultoriaEntregable objConsultoriaEntregable = new CConsultoriaEntregable(_DataSistema.ConexionBaseDato);
+                objResultado = objConsultoriaEntregable.Actualizacion(Convert.ToInt32(TxtIdEntregable.Text), Convert.ToInt32(TxtIdConsultoria.Text), TxtNombreEntregable.Text, TxtDescripcion.Text,
+                Convert.ToDateTime(TxtFechaEntregaEntregable.Text), TxtDuracionEntregable.Text, Convert.ToChar(TxtEstadoEntregable.Text), Convert.ToString(nombreArchivo), "", _DataSistema.Cusuario, _DataSistema.Cusuario, TipoActualizacion.Actualizar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVEntregableDetalle();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UUPEntregable);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPDocumento);
+            }
+        }
+
+        protected void FileEntregable_UploadedComplete(object sender, AjaxControlToolkit.AsyncFileUploadEventArgs e)
+        {
+            bool exists = System.IO.Directory.Exists(Server.MapPath("~/ASP/Entregables/" + Convert.ToString(TxtNombreConsultoria.Text) + "/"));
+            if (!exists)
+            {
+                System.IO.Directory.CreateDirectory(Server.MapPath("~/ASP/Entregables/" + Convert.ToString(TxtNombreConsultoria.Text) + "/"));
+            }
+            string savePath = MapPath("~/ASP/Entregables/" + TxtNombreConsultoria.Text + "/" + _DataSistema.Cusuario + "_" + Convert.ToString(TxtIdConsultoria.Text) + "_" + Convert.ToString(TxtIdEntregable.Text) + "_" + Path.GetFileName(e.FileName));
+            ((AsyncFileUpload)sender).SaveAs(savePath);
+        }
+
+        private void FillGVEntregableDetalle()
+        {
+            CConsultoriaEntregable objEntregable = new CConsultoriaEntregable(_DataSistema.ConexionBaseDato);
+            dvEntregables = new DataView(objEntregable.Detalle(0, 0, "", "", DateTime.Today, "", 'X', "", "", _DataSistema.Cusuario, "", DateTime.Today, "", DateTime.Today, 3).TB_CONSULTORIA_ENTREGABLE);
+
+            GVEntregableAspirante.DataSource = dvEntregables;
+            GVEntregableAspirante.DataBind();
+
+        }
     }
 }

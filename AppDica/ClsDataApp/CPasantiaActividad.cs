@@ -16,7 +16,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TB_EMP Detalle(int Id, int IdPasantia, int IdActAspirante,
+        public ClsDataSets.DS_TB_EMP Detalle(int Id, int IdPasantia, string Actividad, string Descripcion, DateTime FechaActi, string Duracion,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
@@ -30,7 +30,10 @@ namespace ClsDataApp
 
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_PASANTIA", IdPasantia);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ACTIVIDAD_ASPIRANTE", IdActAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_ACTIVIDAD", Actividad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DESCRIPCION_ACT", Descripcion);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ENTREGA_ACT", FechaActi);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DURACION_ACT", Duracion);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
@@ -52,8 +55,8 @@ namespace ClsDataApp
 
             return objDataSet;
             }
-        public DataQuery Actualizacion(int Id, int IdPasantia, int IdActAspirante,
-            int OpcionConsulta, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+        public DataQuery Actualizacion(int Id, int IdPasantia, string Actividad,string Descripcion,DateTime FechaActi,string Duracion,
+            string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
             try
@@ -63,7 +66,7 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TB_PASANTIA_ACTIVIDAD_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";
@@ -94,7 +97,10 @@ namespace ClsDataApp
                     ObjCommand.Parameters.AddWithValue("@ID", Id);
                 }
                 ObjCommand.Parameters.AddWithValue("@ID_PASANTIA", IdPasantia);
-                ObjCommand.Parameters.AddWithValue("@ID_ACTIVIDAD_ASPIRANTE", IdActAspirante);
+                ObjCommand.Parameters.AddWithValue("@DS_ACTIVIDAD", Actividad);
+                ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION_ACT", Descripcion);
+                ObjCommand.Parameters.AddWithValue("@FECH_ENTREGA_ACT", FechaActi);
+                ObjCommand.Parameters.AddWithValue("@DS_DURACION_ACT", Duracion);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
                 ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);

@@ -13,7 +13,7 @@ namespace MyMainApp
 {
     public partial class Registro : FormaSISWeb
     {
-        private DataView dvTipoAspirante;
+        private DataView dvTipoAspirante, dvConfMail;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,7 +56,16 @@ namespace MyMainApp
                         objResultado = objAspirante.Actualizacion(nit,nombres, apellidos, Convert.ToDateTime(fechaNacimiento), 'X',
                          "", "", "", email, "", nit, 'P', Convert.ToInt32(perfil), "", 0, 0, 0, nit, "", "", "", nit,
                          TipoActualizacion.Adicionar);
-                     DespliegaMensaje("Usuario y Contraseña enviado al correo");
+                          CConfMail objConfMail = new CConfMail(_DataSistema.ConexionBaseDato);
+                    DataView dvConfMail = new DataView(objConfMail.Detalle(1, "", "", "", 0,"", "","", DateTime.Now, "", DateTime.Now, 1).TBC_CONF_MAIL);
+                        string asunto,body,correo;
+                        asunto="Registro Usuario PIXELS CAPS";
+                        body = "<h3 align='center'>Registrado a PIXELS CAPS</h3><br><label>Usuario:" + nit + "</label><br><label>Contraseña:" + password + "</label>";
+                        correo = email;
+                    objConfMail.SendMail(dvConfMail.Table.Rows[0]["DS_MAIL_FROM"].ToString(), dvConfMail.Table.Rows[0]["DS_MAIL_HEAD"].ToString(), dvConfMail.Table.Rows[0]["DS_SMTP"].ToString(),
+                       Convert.ToInt32(dvConfMail.Table.Rows[0]["DS_PORT"].ToString()), dvConfMail.Table.Rows[0]["DS_MAIL"].ToString(), dvConfMail.Table.Rows[0]["DS_PASSWORD"].ToString(),
+                       asunto, body, correo);
+                        DespliegaMensaje("Usuario y Contraseña enviado al correo");
                     }
                     else
                     {

@@ -30,7 +30,7 @@
             <div class="container-fluid">
                 <div id="content">
                     <%--inicio container-fluid--%>
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                 <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
@@ -333,6 +333,7 @@
                                                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                             </asp:GridView>
                                         </asp:Panel>
+                                        <br />
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender1" runat="server" TargetControlID="PanelHabilidades" BorderColor="Orange" />
                                         <asp:Panel ID="PanelHabilidades" runat="server">
                                             <div align="center">
@@ -383,6 +384,7 @@
                                                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                             </asp:GridView>
                                         </asp:Panel>
+                                        <br />
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender3" runat="server" TargetControlID="PanelDestreza" BorderColor="Orange" />
                                         <asp:Panel ID="PanelDestreza" runat="server">
                                             <div align="center">
@@ -418,6 +420,60 @@
                                             </asp:GridView>
                                         </asp:Panel>
                                         <br />
+
+                                        <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender5" runat="server" TargetControlID="PanelActividadesPasentia" BorderColor="Orange" />
+                                        <asp:Panel ID="PanelActividadesPasentia" runat="server">
+                                            <div align="center">
+                                                <asp:Label ID="Label63" runat="server" Text="Actividades" Font-Size="14pt"></asp:Label>
+                                            </div>
+ <div class="form-group">
+                    <asp:Label ID="Label64" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="NOMBRE ACTIVIDAD:"></asp:Label>
+                    <div class="col-md-9">
+                        <asp:TextBox ID="TxtActividad" runat="server"  class="form-control" AutoCompleteType="Disabled"></asp:TextBox>
+                    </div>
+                </div>
+            <div class="form-group">
+                    <asp:Label ID="Label65" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="DURACION EN DIAS:"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="TxtDuracionA" runat="server" class="form-control" AutoCompleteType="Disabled"></asp:TextBox>
+                    </div>
+                    <asp:Label ID="Label66" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="FECHA DE ENTREGA:"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="TxtFechaEntregaA" runat="server" class="form-control" TextMode="Date"></asp:TextBox>
+                    </div>
+                </div>
+            <div class="form-group">
+                    <asp:Label class="control-label  col-sm-3" ID="Label67" runat="server" Font-Bold="True" Text="DESCRIPCION:"></asp:Label>
+                    <div class="col-md-9">
+                        <asp:TextBox class="form-control" ID="TxtDescripActividad" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
+                    </div>
+                </div>
+            <br />
+                <div align="center">
+                    <asp:Button ID="BtnActividades" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnActividades_Click" />
+                    &nbsp;<asp:Button ID="BtnCancelarActivades" runat="server" Text="CANCELAR" class="btn btn-primary"/>
+                </div>
+            <asp:GridView ID="GVActividades" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:BoundField HeaderText="NOMBRE ACTIVIDAD" DataField="DS_ACTIVIDAD" />
+                    <asp:BoundField HeaderText="FECHA DE ENTREGA" DataField="FECH_ENTREGA_ACT" />
+                    <asp:BoundField HeaderText="DESCRIPCIÓN" DataField="DS_DURACION_ACT" />
+                </Columns>
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+            </asp:GridView>
+                                        </asp:Panel>
+                                        <br />
+
                                         <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender4" runat="server" TargetControlID="PanelDatoAspirante" BorderColor="Orange" />
                                         <asp:Panel ID="PanelDatoAspirante" runat="server" Visible="False">
                                             <div align="center">
@@ -468,6 +524,12 @@
                                                             Text="Editar" OnClientClick="return confirm('¿Desea editar este registro?');" />
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="ENTREGABLES">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="BtnVerAspirantes" runat="server" CommandName="Select"
+                                                                Text="Ver Aspirantes" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -604,7 +666,7 @@
                                                     <asp:TemplateField HeaderText="ENTREGABLES">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BtnVerEntregable" runat="server" CommandName="Select"
-                                                                Text="Ver Entregables" OnClientClick="ShowModalPopup()" />
+                                                                Text="Ver Entregables" />
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                 </Columns>

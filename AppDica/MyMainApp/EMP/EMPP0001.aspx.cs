@@ -16,7 +16,7 @@ namespace MyMainApp.EMP
     {
         private DataView dvActividadEconomica, dvEmpresa, dvDepartamento, dvMunicipio, dvHabilidad, dvDestreza, dvPasantia,
             dvAreaPasantia, dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvEscolaridadPasantia,
-            dvConsultoria, dvEntregable, dvCategoriaEscolaridad;
+            dvConsultoria, dvEntregable, dvCategoriaEscolaridad, dvPasantiaActividad;
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
@@ -623,5 +623,48 @@ namespace MyMainApp.EMP
             dtPR = dvConsultoria.ToTable();
             RVEmpresa.LocalReport.DataSources.Add(new ReportDataSource("TB_CONSULTORIA", dtPR));
         }
+
+        protected void BtnActividades_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(TxtIDPasantia.Text) > 0)
+            {
+         try
+         {   CPasantiaActividad objPasantiaActividad = new CPasantiaActividad(_DataSistema.ConexionBaseDato);
+            objResultado = objPasantiaActividad.Actualizacion(0, Convert.ToInt32(TxtIDPasantia.Text), TxtActividad.Text,
+           TxtDescripActividad.Text,Convert.ToDateTime(TxtFechaEntregaA.Text),    TxtDuracionA.Text
+            , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+            if (objResultado.CodigoError == 0)
+            {
+                FillGVActividades();
+            }
+            else
+            {
+                DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPPasantia);
+            }
+         }
+         catch (Exception ex)
+         {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+         }
+               }
+                else {
+                    DespliegaMensajeUpdatePanel("No se ha seleccionado una pasantia para agregar Actividad", UPPasantia);
+                }
+
+        }
+
+
+        protected void FillGVActividades()
+        {
+            CPasantiaActividad objPasantiaActividad = new CPasantiaActividad(_DataSistema.ConexionBaseDato);
+            dvPasantiaActividad = new DataView(objPasantiaActividad.Detalle(0, Convert.ToInt32(TxtIDPasantia.Text), TxtActividad.Text,
+           TxtDescripActividad.Text, Convert.ToDateTime(TxtFechaEntregaA.Text), TxtDuracionA.Text, "", DateTime.Now, "", DateTime.Now, 2).TB_PASANTIA_ACTIVIDAD);
+
+            GVActividades.DataSource = dvPasantiaActividad;
+            GVActividades.DataBind();
+        }
+
+
     }
 }

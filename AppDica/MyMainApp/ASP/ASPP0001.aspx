@@ -7,12 +7,12 @@
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CPHPrincipal">
 
     <form id="form1" runat="server" class="form-horizontal">
-        <%--inicio formulario--%>
+        <%--fin tab ENTREGABLE--%>
         <div class="text-center">
-            <%--  div titulo--%>
+            <%--fin contenido tab--%>
             <asp:Label ID="LblTitulo" runat="server" Text="Registro Aspirante" Font-Bold="True" Font-Size="18pt"></asp:Label>
         </div>
-        <%--fin div titulo--%>
+        <%--fin container-fluid--%>
         
                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div ALIGN="RIGHT">
@@ -35,8 +35,10 @@
                                     </asp:DropDownList></div></div></asp:Panel><br /><div align="center"><asp:Button ID="BtnGuardarDatoGeneral" runat="server" class="btn btn-primary" OnClick="BtnGuardarDatoGeneral_Click" Text="GUARDAR" ValidationGroup="DatoGeneral" />&#160;</div><br />
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
-                            </ContentTemplate>
-                        </ajaxToolkit:TabPanel>
+                            
+</ContentTemplate>
+                        
+</ajaxToolkit:TabPanel>
                     <%--  </div>
                         <%--fin tab datos--%>
                     <%--<div class="tab-pane " id="Escol">--%>
@@ -69,8 +71,10 @@
                                     </asp:GridView><br />
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
-                            </ContentTemplate>
-            </ajaxToolkit:TabPanel>
+                            
+</ContentTemplate>
+            
+</ajaxToolkit:TabPanel>
                     <%-- </div>--%>
                       <ajaxToolkit:TabPanel runat="server" HeaderText="HABILIDADES" ID="TabPanel3">
                             <ContentTemplate>
@@ -98,15 +102,33 @@
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
-                            </ContentTemplate>
-            </ajaxToolkit:TabPanel>
+                            
+</ContentTemplate>
+            
+</ajaxToolkit:TabPanel>
                     <%--fin tab habilidades--%>
                     <%--<div class="tab-pane" id="Destre">--%>
                     <%--inicio tab destrezas--%>
                       <ajaxToolkit:TabPanel runat="server" HeaderText="DESTREZAS" ID="TabPanel4">
                            <ContentTemplate>
-                               <asp:UpdatePanel ID="UPDestreza" runat="server"><triggers><asp:AsyncPostBackTrigger ControlID="BtnGuardarDestreza" /></triggers><ContentTemplate><br /><div class="form-group"><asp:Label ID="Label42" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="DESTREZA:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboDestreza" runat="server" class="form-control" DataTextField="DS_DESTREZA" DataValueField="ID">
-                                   </asp:DropDownList></div></div><div align="center"><asp:Button ID="BtnGuardarDestreza" runat="server" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click" Text="GUARDAR" />&#160;<asp:Button ID="BtnCancelarDestreza" runat="server" CausesValidation="False" class="btn btn-primary" Text="CANCELAR" /></div><br /><asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVDestreza_RowDeleting" Width="100%"><AlternatingRowStyle BackColor="White" /><Columns><asp:TemplateField HeaderText="" Visible="false"><ItemTemplate><asp:TextBox ID="TxtIDDestreza" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
+                               <asp:UpdatePanel ID="UPDestreza" runat="server">
+                                   <triggers>
+                                       <asp:AsyncPostBackTrigger ControlID="BtnGuardarDestreza" />
+                                   </triggers>
+                                   <ContentTemplate><br />
+                                       <div class="form-group">
+                                           <asp:Label ID="Label42" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="DESTREZA:"></asp:Label>
+                                           <div class="col-md-3">
+                                               <asp:DropDownList ID="CboDestreza" runat="server" class="form-control" DataTextField="DS_DESTREZA" DataValueField="ID">
+                                   </asp:DropDownList>
+                                           </div>
+                                       </div>
+                                       <div align="center">
+                                           <asp:Button ID="BtnGuardarDestreza" runat="server" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click" Text="GUARDAR" />&#160;<asp:Button ID="BtnCancelarDestreza" runat="server" CausesValidation="False" class="btn btn-primary" Text="CANCELAR" /></div><br />
+                                   <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVDestreza_RowDeleting" Width="100%"><AlternatingRowStyle BackColor="White" />
+                                       <Columns>
+                                           <asp:TemplateField HeaderText="" Visible="false">
+                                   <ItemTemplate><asp:TextBox ID="TxtIDDestreza" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
                                    </ItemTemplate>
                                    </asp:TemplateField><asp:BoundField DataField="DS_DESTREZA" HeaderText="DESTREZA" /><asp:TemplateField HeaderText="Eliminar"><ItemTemplate><asp:Button ID="BtnEliminarDestreza" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
                                    </ItemTemplate>
@@ -125,8 +147,10 @@
                                    </asp:GridView>
                                    </ContentTemplate>
                                </asp:UpdatePanel>
-                           </ContentTemplate>
-            </ajaxToolkit:TabPanel>
+                           
+</ContentTemplate>
+            
+</ajaxToolkit:TabPanel>
                     <%--fin tab habilidades--%>
                     <%--<div class="tab-pane" id="Destre">--%>
                     <%--<div class="tab-pane" id="Doc">
@@ -137,9 +161,18 @@
                                     <ContentTemplate><div class="form-group"><asp:Label ID="Label43" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="TIPO DOCUMENTO:"></asp:Label><div class="col-md-3"><asp:DropDownList ID="CboTipoDocumento" runat="server" class="form-control" DataTextField="DS_TIPO_DOCUMENTO" DataValueField="ID">
                                     </asp:DropDownList></div><div class="form-group"><asp:Label ID="Label22" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="ADJUNTAR DOCUMENTOS:"></asp:Label><div class="col-md-3"><ajaxToolkit:AsyncFileUpload ID="FileDocumento" runat="server" FailedValidation="False" OnUploadedComplete="FileDocumento_UploadedComplete" PersistFile="True" /></div></div></div><div class="form-group"><asp:Label ID="Label40" runat="server" class="control-label  col-sm-2" Font-Bold="True" Text="DESCRIPCION:"></asp:Label><div class="col-md-8"><asp:TextBox ID="TxtDescripcionDocumento" runat="server" AutoCompleteType="Disabled" class="form-control" TextMode="MultiLine"></asp:TextBox></div></div><div align="center"><asp:Button ID="BtnGuardarDocumento" runat="server" class="btn btn-primary" OnClick="BtnGuardarDocumento_Click" Text="GUARDAR" />&#160;<asp:Button ID="BtnCancelarDocumento" runat="server" CausesValidation="False" class="btn btn-primary" Text="CANCELAR" /></div><br /><asp:GridView ID="GVDocumento" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVDocumento_RowDeleting" Width="100%"><AlternatingRowStyle BackColor="White" /><Columns><asp:TemplateField HeaderText="" Visible="false"><ItemTemplate><asp:TextBox ID="TxtIDDocumento" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
                                     </ItemTemplate>
-                                    </asp:TemplateField><asp:BoundField DataField="DS_TIPO_DOCUMENTO" HeaderText="TIPO DOCUMENTO" /><asp:BoundField DataField="DS_DOCUMENTO" HeaderText="DESCRIPCION" /><asp:BoundField DataField="FECH_CREA" HeaderText="FECHA" /><asp:TemplateField HeaderText="Descargar"><ItemTemplate><a href='<%# "http://"+Request.Url.Authority +"/ASP/Documentos/"+Eval("URL_DOCUMENTO") %>' target="_blank">Descargar</a>
-                                    </ItemTemplate>
-                                    </asp:TemplateField><asp:TemplateField HeaderText="Eliminar"><ItemTemplate><asp:Button ID="BtnEliminarDocumento" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
+                                    </asp:TemplateField>
+                                        <asp:BoundField DataField="DS_TIPO_DOCUMENTO" HeaderText="TIPO DOCUMENTO" />
+                                        <asp:BoundField DataField="DS_DOCUMENTO" HeaderText="DESCRIPCION" />
+                                        <asp:BoundField DataField="FECH_CREA" HeaderText="FECHA" />
+                                    <asp:TemplateField HeaderText="Descargar">
+                                            <ItemTemplate>
+                                                <a href='<%# "http://"+Request.Url.Authority +"/ASP/Documentos/"+Eval("URL_DOCUMENTO") %>' target="_blank">Descargar</a>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Eliminar">
+                                            <ItemTemplate>
+                                                <asp:Button ID="BtnEliminarDocumento" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
                                     </ItemTemplate>
                                     </asp:TemplateField>
                                     </Columns>
@@ -156,40 +189,137 @@
                                     </asp:GridView>
                                     </ContentTemplate>
                                     </asp:UpdatePanel></asp:Panel>
-                            </ContentTemplate>
-            </ajaxToolkit:TabPanel>
+
+
+                            
+</ContentTemplate>
+            
+</ajaxToolkit:TabPanel>
                     <%--inicio tab ENTREGABLE--%>
+                        
                       <ajaxToolkit:TabPanel runat="server" HeaderText="ENTREGABLE" ID="TabPanel7">
                            <ContentTemplate>
-                               <asp:Panel ID="Panel2" runat="server"><br />
-                                   <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                                       <ContentTemplate>
-                                           <div class="form-group">
-                                               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVDocumento_RowDeleting" Width="100%"><AlternatingRowStyle BackColor="White" /><Columns><asp:TemplateField HeaderText="" Visible="false"><ItemTemplate><asp:TextBox ID="TxtIDDocumento" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
+                               <asp:UpdatePanel ID="UUPEntregable" runat="server"><ContentTemplate>
+                               <asp:Panel ID="PanelListaEntregable" runat="server"><br />                                   
+                                       
+                                           <asp:TextBox ID="TxtIdEntregable" runat="server" Text="0" Visible="False"></asp:TextBox>
+                                           <asp:TextBox ID="TxtIdConsultoria" runat="server" Text="0" Visible="False"></asp:TextBox>
+                                           <asp:TextBox ID="TxtNombreConsultoria" runat="server" Text="0" Visible="False"></asp:TextBox>
+                                            <asp:GridView ID="GVEntregable" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnSelectedIndexChanged="GVEntregable_SelectedIndexChanged">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="" Visible="false">
+                                                    <ItemTemplate>
+                                                        <asp:TextBox ID="TxtIdEntregableGV" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:TextBox>
                                                     </ItemTemplate>
-                                                    </asp:TemplateField><asp:BoundField HeaderText="TIPO DOCUMENTO" /><asp:BoundField HeaderText="DESCRIPCION" /><asp:BoundField HeaderText="FECHA" /><asp:TemplateField HeaderText="Descargar"><ItemTemplate><a href='<%# "http://"+Request.Url.Authority +"/ASP/Documentos/"+Eval("URL_DOCUMENTO") %>' target="_blank">Descargar</a>
+                                                </asp:TemplateField>
+                                                <asp:BoundField HeaderText="ID" DataField="ID" />
+                                                <asp:BoundField HeaderText="NOMBRE CONSULTORIA" DataField="DS_NOMBRE_CONSULTORIA" />
+                                                <asp:BoundField HeaderText="NOMBRE DE PROYECTO" DataField="DS_ENTREGABLE" />
+                                                <asp:BoundField HeaderText="FECHA DE ENTREGA" DataField="FECH_ENTREGA_ENT" />
+                                                <asp:BoundField HeaderText="TIEMPO DE DESARROLLO " DataField="DS_DURACION_ENT" />
+                                                <asp:TemplateField HeaderText="ENTREGABLES">
+                                                    <ItemTemplate>
+                                                        <asp:Button ID="BtnVerEntregable" runat="server" CommandName="Select"
+                                                            Text="Ver Entregables"  />
                                                     </ItemTemplate>
-                                                    </asp:TemplateField><asp:TemplateField HeaderText="Eliminar"><ItemTemplate><asp:Button ID="BtnEliminarDocumento" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
-                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        </asp:GridView>                                   
+                               </asp:Panel> 
+                               <asp:Panel ID="PanelEntregable" runat="server" Visible="False">
+                                   <br />
+                                          <div align="center">
+                                                <asp:Label ID="Label63" runat="server" Text="Entregables" Font-Size="14pt"></asp:Label></div>
+                                          <div class="form-group">
+                                                <asp:Label ID="Label64" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="NOMBRE ENTREGABLE:"></asp:Label>
+                                                <div class="col-md-9">
+                                                    <asp:TextBox ID="TxtNombreEntregable" runat="server" class="form-control" AutoCompleteType="Disabled" Enabled="False" Width="100%"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:Label ID="Label65" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="DURACION EN DIAS:"></asp:Label>
+                                                <div class="col-md-3">
+                                                    <asp:TextBox ID="TxtDuracionEntregable" runat="server" class="form-control" AutoCompleteType="Disabled" Enabled="False" Width="100%"></asp:TextBox>
+                                                </div>
+                                                <asp:Label ID="Label66" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="FECHA DE ENTREGA:"></asp:Label>
+                                                <div class="col-md-3">
+                                                    <asp:TextBox ID="TxtFechaEntregaEntregable" runat="server" class="form-control"  Enabled="False" Width="100%"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:Label class="control-label  col-sm-3" ID="Label67" runat="server" Font-Bold="True" Text="DESCRIPCION:"></asp:Label>
+                                                <div class="col-md-9">
+                                                    <asp:TextBox class="form-control" ID="TxtDescripcion" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled" Enabled="False" Width="100%"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:Label ID="Label50" runat="server" class="control-label  col-sm-3" Font-Bold="True" Text="ESTADO ENTREGABLE:"></asp:Label>
+                                                <div class="col-md-3">
+                                                    <asp:TextBox ID="TxtEstadoEntregable" runat="server" class="form-control"  Enabled="False" Width="100%"></asp:TextBox>
+                                                </div>  
+                                            </div> 
+                                            <div class="form-group">                                                
+                                                <asp:Label ID="Label48" runat="server" class="control-label col-sm-3" Font-Bold="True" Text="ADJUNTAR ENTREGABLE:"></asp:Label>
+                                                <div class="col-md-9">
+                                                    <ajaxToolkit:AsyncFileUpload ID="FileEntregable" runat="server" FailedValidation="False" OnUploadedComplete="FileEntregable_UploadedComplete" PersistFile="True" />
+                                                </div>                                                
+                                            </div>                                             
+                                            <br />
+                                            <div align="center">
+                                                <asp:Button ID="btnGuardarEntregable" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarEntregableConsultoria_Click"/>
+                                                &nbsp;<asp:Button ID="btnAtrasEnt" runat="server" Text="ATRAS" class="btn btn-primary" CausesValidation="False"/>
+                                            </div>
+                                            <br />
+                                            <asp:GridView ID="GVEntregableAspirante" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+                                                <AlternatingRowStyle BackColor="White" />
+                                                <Columns>
+                                                    <asp:BoundField HeaderText="NOMBRE DE ENTREGABLE" DataField="DS_ENTREGABLE" />
+                                                    <asp:BoundField HeaderText="FECHA DE ENTREGA" DataField="FECH_ENTREGA_ENT" />
+                                                    <asp:BoundField HeaderText="DESCRIPCIÓN" DataField="DS_DESCRIPCION_ENT" />
+                                                    <asp:TemplateField HeaderText="Descargar">
+                                                        <ItemTemplate>
+                                                            <a href='<%# "http://"+Request.Url.Authority +"/ASP/Entregables/"+Eval("DS_NOMBRE_CONSULTORIA")+"/"+Eval("URL_ENTREGABLE") %>' target="_blank">Descargar</a>
+                                                        </ItemTemplate>
                                                     </asp:TemplateField>
-                                                    </Columns>
-                                                    <EditRowStyle BackColor="#2461BF" />
-                                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                                    <RowStyle BackColor="#EFF3FB" />
-                                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                                    <sortedascendingcellstyle backcolor="#F5F7FB" />
-                                                    <sortedascendingheaderstyle backcolor="#6D95E1" />
-                                                    <sorteddescendingcellstyle backcolor="#E9EBEF" />
-                                                    <sorteddescendingheaderstyle backcolor="#4870BE" />
-                                                </asp:GridView>
-                                           </div>
-                                       </ContentTemplate>
-                                   </asp:UpdatePanel>
-                               </asp:Panel>
-                           </ContentTemplate>
-            </ajaxToolkit:TabPanel>
+
+                                                    <asp:TemplateField HeaderText="Eliminar">
+                                                            <ItemTemplate>
+                                                                <asp:Button ID="BtnEliminarEntregable" runat="server" CommandName="Delete" OnClientClick="return confirm('¿Desea eliminar este archivo?');" Text="Eliminar" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                                <EditRowStyle BackColor="#2461BF" />
+                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                <RowStyle BackColor="#EFF3FB" />
+                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                            </asp:GridView>
+                                            <br />
+                                    </asp:Panel>
+                            
+</ContentTemplate>
+</asp:UpdatePanel>
+
+                 
+</ContentTemplate>
+            
+</ajaxToolkit:TabPanel>
                     <%--</div>--%>
                     <%--fin tab ENTREGABLE--%>
 
@@ -198,14 +328,16 @@
                       <ajaxToolkit:TabPanel runat="server" HeaderText="ACTIVIDAD PASANTIA" ID="TabPanel6">
                            <ContentTemplate>
 
-                           </ContentTemplate>
-            </ajaxToolkit:TabPanel>
+                           
+</ContentTemplate>
+            
+</ajaxToolkit:TabPanel>
                     <%--</div>--%>
                     <%--fin tab ENTREGABLE--%>
                     </ajaxToolkit:TabContainer>
                     </asp:Panel>
             </div>
-            <%--fin contenido tab--%>
+            <%--fin formulario--%>
         </div>
         
             <%--fin container-fluid--%>
