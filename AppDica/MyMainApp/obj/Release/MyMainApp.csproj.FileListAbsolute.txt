@@ -81,3 +81,5 @@ C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\bin\zh-CHS\Microsoft.
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Release\MyMainApp.dll
 C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\obj\Release\MyMainApp.pdb
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\bin\ASP\RptFichaAspirante.rdlc
+C:\Users\AYSSA\Documents\GitHub\AppDicaD\AppDica\MyMainApp\bin\EMP\RptEmpresa.rdlc
